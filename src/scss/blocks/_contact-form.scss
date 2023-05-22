@@ -1,0 +1,50 @@
+.contact-form {
+  font-family: "Rock Star";
+  width: 100%;
+  max-width: 722px;
+  display: flex;
+  flex-direction: column;
+
+  &__controls-group {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 11px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: -1000px;
+  }
+
+  &__input {
+    padding: 9px 0;
+    width: 100%;
+    background-color: transparent;
+    @include font-title-h4;
+    color: $color-light;
+    border-bottom: 3px solid $color-light;
+
+    &::placeholder {
+      font: inherit;
+      color: inherit;
+    }
+
+    @include _992 {
+      @include font-title-h4-mobile;
+    }
+  }
+
+  &__submit-btn {
+    margin-top: 86px;
+
+    @include _992 {
+      margin-top: 57px;
+      align-self: center;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

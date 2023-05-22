@@ -1,0 +1,11 @@
+.container {
+  /*box-sizing: content-box;*/
+  /*   max-width: 1410px; */
+  /*   margin: 0 auto;
+  padding: 0 16px; */
+  padding-inline: 62px;
+
+  @include _992 {
+    padding-inline: 21px;
+  }
+}

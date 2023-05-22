@@ -1,0 +1,78 @@
+@mixin responsive-value($property, $startSize, $endSize) {
+  $addSize: $startSize - $endSize;
+  #{$property}: calc(
+    #{$endSize + px} + #{$addSize} * ((100vw - 375px) / (1534 - 375))
+  );
+}
+
+@mixin font-title-h1 {
+  font-family: "Rock Star";
+  font-size: 147px;
+  line-height: 132px;
+}
+
+@mixin font-title-h2 {
+  font-family: "Rock Star";
+  font-size: 36px;
+  line-height: 48px;
+}
+
+@mixin font-title-h3 {
+  font-family: "Rock Star";
+  font-size: 53px;
+  line-height: 76px;
+}
+
+@mixin font-title-h4 {
+  font-family: "Rock Star";
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@mixin font-title-h4-mobile {
+  font-family: "Rock Star";
+  font-size: 18px;
+  line-height: 23px;
+}
+
+@mixin font-title-h5 {
+  font-family: "Rock Star";
+  font-size: 22px;
+  line-height: 29px;
+}
+
+@mixin _992 {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin min_992 {
+  @media (min-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin _576 {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media (max-width: 479.98px) {
+    @content;
+  }
+}
+
+@mixin _375 {
+  @media (max-width: 374.98px) {
+    @content;
+  }
+}

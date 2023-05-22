@@ -1,0 +1,97 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #000;
+
+  &__body {
+    display: flex;
+    padding: 30px 0;
+
+    @include _992 {
+      justify-content: space-between;
+      padding: 18px 0 22px 0;
+    }
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 10;
+
+    &:hover {
+      .header__logo-img {
+        fill: $color-light;
+      }
+    }
+
+    @include _992 {
+      position: static;
+      translate: 0 0;
+    }
+  }
+
+  &__logo-img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 47px;
+    fill: $color-orange;
+    transition: all 0.5s ease;
+
+    @include _992 {
+      width: 40px;
+      height: 31px;
+    }
+  }
+}
+
+.menu-icon {
+  position: relative;
+  z-index: 10;
+  width: 37px;
+  cursor: pointer;
+
+  &.open {
+    .menu-icon__bar:nth-child(1) {
+      transform: translate(0, -50%) rotate(-45deg);
+      top: 50%;
+    }
+
+    .menu-icon__bar:nth-child(2) {
+      transform: translate(0, 50%) rotate(45deg);
+      bottom: 50%;
+    }
+  }
+
+  @include min_992 {
+    display: none;
+  }
+}
+
+.menu-icon__bar {
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: $color-orange;
+  transition: all 0.5s ease;
+
+  &:nth-child(1) {
+    top: 50%;
+    transform: translate(0, -200%);
+  }
+
+  &:nth-child(2) {
+    bottom: 50%;
+    transform: translate(0, 200%);
+  }
+}

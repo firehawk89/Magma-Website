@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 107px;
+  //gap: calc(80px + (107 - 80) * ((100vw - 375px) / (1410 - 375)));
+
+  @include _992 {
+    gap: 80px;
+  }
+
+  &__link:hover {
+    .social__icon {
+      fill: $color-orange;
+    }
+  }
+
+  &__icon {
+    width: 81px;
+    height: 81px;
+    //width: calc(61px + (81 - 61) * ((100vw - 375px) / (1410 - 375)));
+    fill: #fff;
+    transition: all 0.5s ease;
+
+    @include _992 {
+      width: 61px;
+      height: 61px;
+    }
+  }
+}
