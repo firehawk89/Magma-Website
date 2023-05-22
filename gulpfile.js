@@ -77,7 +77,7 @@ function cssTask() {
 function scssTask() {
   return src(path.src.scss)
     .pipe(plumber({ errorHandler: notifier.error }))
-    .pipe(autoprefixer({ overrideBrowserslist: ["last 5 versions"] }))
+    .pipe(autoprefixer({ overrideBrowserslist: ["last 2 versions"] }))
     .pipe(scss())
     .pipe(dest(path.build.css))
     .pipe(concat("style.min.css"))
@@ -134,7 +134,7 @@ function fontsTask() {
   return src(path.src.fonts)
     .pipe(plumber({ errorHandler: notifier.error }))
     .pipe(newer(path.build.fonts))
-    .pipe(fonter({ formats: ["ttf", "woff"] }))
+    .pipe(fonter({ formats: ["eot", "ttf", "woff"] }))
     .pipe(dest(path.build.fonts))
     .pipe(tt2woff2())
     .pipe(dest(path.build.fonts));
