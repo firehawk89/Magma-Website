@@ -90,7 +90,6 @@ function jsTask() {
   return (
     src(path.src.js)
       .pipe(plumber({ errorHandler: notifier.error }))
-      .pipe(babel({ presets: ["@babel/env"] }))
       .pipe(dest(path.build.js))
       /*.pipe(src(path.src.js))*/
       /*src(["node_modules/swiper/swiper-bundle.js", path.src.js])*/
