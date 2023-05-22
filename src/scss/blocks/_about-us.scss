@@ -1,0 +1,66 @@
+.about-us {
+  padding: 63px 0;
+
+  &__container {
+    padding-inline: 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__content {
+    padding-bottom: 38px;
+    flex: 0 1 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include min_992 {
+      gap: 31px;
+    }
+
+    @include _992 {
+      padding-bottom: 0;
+      flex: 0 1 100%;
+    }
+  }
+
+  &__title {
+    margin-top: -19px;
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 105px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-orange;
+
+    @include _768 {
+      @include font-title-h2;
+    }
+  }
+
+  &__text {
+    width: 87%;
+    text-align: center;
+    color: $color-light;
+
+    @include _992 {
+      width: 100%;
+      margin-top: 12px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+
+    @include _992 {
+      margin-top: 60px;
+    }
+  }
+
+  &__image {
+    @include _992 {
+      display: none;
+    }
+  }
+}

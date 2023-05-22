@@ -40,6 +40,7 @@
 
   &__submit-btn {
     margin-top: 86px;
+    align-self: flex-start;
 
     @include _992 {
       font-size: 24px;

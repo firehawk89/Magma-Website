@@ -21,13 +21,6 @@
   }
 
   &__link {
-    color: $color-orange;
-    transition: color 0.5s ease;
-
-    &:hover {
-      color: $color-light;
-    }
-
     @include _768 {
       font-size: 30px;
       line-height: 39px;

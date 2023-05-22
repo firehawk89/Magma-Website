@@ -1,0 +1,16 @@
+.link {
+  color: $color-light;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $color-orange;
+  }
+
+  &--color-orange {
+    color: $color-orange;
+
+    &:hover {
+      color: $color-light;
+    }
+  }
+}

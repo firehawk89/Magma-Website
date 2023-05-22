@@ -1,8 +1,10 @@
 /* BUTTON */
 .btn {
+  display: inline-block;
   position: relative;
-  padding: 6px 63px 10px;
-  width: fit-content;
+  padding: 6px 20px 10px;
+  min-width: 173px;
+  text-align: center;
   background: transparent;
   box-shadow: inset 0px 0px 0px 4px $color-light;
   border-radius: 20px;

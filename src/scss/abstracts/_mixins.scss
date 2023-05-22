@@ -11,10 +11,22 @@
   line-height: 132px;
 }
 
+@mixin font-title-h1-mob {
+  font-family: "Rock Star";
+  font-size: 40px;
+  line-height: 52px;
+}
+
 @mixin font-title-h2 {
   font-family: "Rock Star";
   font-size: 36px;
   line-height: 48px;
+}
+
+@mixin font-title-h2-mob {
+  font-family: "Rock Star";
+  font-size: 16px;
+  line-height: 21px;
 }
 
 @mixin font-title-h3 {

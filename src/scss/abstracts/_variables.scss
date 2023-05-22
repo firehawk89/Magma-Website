@@ -5,5 +5,11 @@ $color-purple: #9a76af;
 $color-pink: #d4157a;
 $color-blue: #00005e;
 $gradient-small: linear-gradient(180deg, #f27c00 0%, #d31080 100%);
-$gradient-big: linear-gradient(180deg, #f27c00 0%, #d31080 100%);
-
+$gradient-big: linear-gradient(
+  180deg,
+  #000000 26.16%,
+  #00005e 32.56%,
+  #f23a00 45.97%,
+  #f27c00 58.17%,
+  #ffffff 73.04%
+);

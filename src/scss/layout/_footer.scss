@@ -18,11 +18,7 @@
     border-bottom: 3px solid $color-light;
 
     &-link {
-      color: $color-light;
-
-      &:hover {
-        color: $color-orange;
-      }
+      transition: none;
 
       @include _992 {
         @include font-title-h4-mobile;
@@ -91,12 +87,6 @@
 
   &__contact-link {
     @include font-title-h4;
-    color: $color-light;
-    transition: all 0.5s ease;
-
-    &:hover {
-      color: $color-orange;
-    }
 
     @include _992 {
       @include font-title-h4-mobile;

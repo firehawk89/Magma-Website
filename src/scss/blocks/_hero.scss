@@ -1,0 +1,67 @@
+.hero {
+  padding: 185px 0px 35px 0px;
+  height: 100vh;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    width: 67.5%;
+    font-size: 72px;
+    line-height: 76px;
+    color: $color-light;
+
+    @include _992 {
+      width: 100%;
+      @include font-title-h1-mob;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include _768 {
+      height: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    display: block;
+    max-width: 257px;
+    word-wrap: break-word;
+    @include font-title-h4;
+    color: $color-light;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-orange;
+    }
+
+    @include _992 {
+      max-width: 226px;
+      @include font-title-h2-mob;
+    }
+
+    @include _768 {
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+  }
+
+  &__btn {
+    @include _768 {
+      margin-top: auto;
+    }
+  }
+
+  @include _768 {
+    padding: 104px 0px 43px 0px;
+  }
+}
