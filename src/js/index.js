@@ -9,6 +9,6 @@ menuIcon.addEventListener("click", () => {
     document.body.style.overflow = "hidden";
   }
 
-  menuIcon.classList.toggle("open");
-  menu.classList.toggle("show");
+  menuIcon.classList.toggle("is-active");
+  menu.classList.toggle("is-opened");
 });
