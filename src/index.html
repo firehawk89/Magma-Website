@@ -11,10 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Wix+Madefor+Display:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper--bg-gradient">
       <header class="header">
         <div class="container">
           <div class="header__body">
@@ -26,24 +27,36 @@
             <nav class="header__menu menu">
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Home</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Home</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Services</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Services</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">About us</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >About us</a
+                  >
                 </li>
               </ul>
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Portfolio</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Portfolio</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Blog</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Blog</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Contact us</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Contact us</a
+                  >
                 </li>
               </ul>
               <ul class="menu__social social">
@@ -77,25 +90,146 @@
           </div>
         </div>
       </header>
-      <main class="main"></main>
+      <main class="main home">
+        <section class="home__hero hero">
+          <div class="container hero__container">
+            <h1 class="hero__title">
+              Quisque sagittis orcut diam condimentum, vel euismod erat
+              placerat.
+            </h1>
+            <div class="hero__footer">
+              <a class="hero__link" href="#">TexttexttextTexttexttext</a>
+              <a
+                class="hero__btn btn btn--gradient btn--bg-expand-top"
+                href="#"
+              >
+                <span class="btn__text">Get a proposal</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="skills">
+          <div class="container">
+            <div class="skills__title">
+              <img
+                class="skills__title-img"
+                src="assets/images/what-we-can-do.svg"
+                alt=""
+              />
+            </div>
+            <ul class="skills__items">
+              <li class="skills__column">
+                <ul class="skills__sub-column">
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">Video production</a>
+                  </li>
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">DaVinci coloring</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="skills__column">
+                <ul class="skills__sub-column">
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">2D and 3D motion</a>
+                  </li>
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">VR and AR design</a>
+                  </li>
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">Photography</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="skills__column">
+                <ul class="skills__sub-column">
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">Graphic design</a>
+                  </li>
+                  <li
+                    class="skills__item wow animate__fadeOut animate__animated"
+                  >
+                    <a class="skills__link link" href="#">Postproduction</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="about-us">
+          <div class="container about-us__container">
+            <picture>
+              <source
+                srcset="assets/images/content/about-01.webp"
+                type="image/webp"
+              />
+              <img
+                class="about-us__image wow animate__fadeInLeft animate__animated"
+                src="assets/images/content/about-01.png"
+                alt=""
+              />
+            </picture>
+            <div
+              class="about-us__content wow animate__fadeInUpBig animate__animated"
+            >
+              <h2 class="about-us__title">About Us</h2>
+              <p class="about-us__text">
+                Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
+                amet. Pellentesque commodo lacus at sodales sodales. Quisque
+                sagittis orci ut diam condimentum, vel euismod erat placerat. In
+                iaculis arcu eros, eget tempus orci facilisis id.Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+                Aliquam in hendrerit urna. Pellentesque sit amet sapien
+                fringilla, mattis ligula consectetur, ultrices mauris.
+              </p>
+              <a class="about-us__btn btn btn--bg-expand-top" href="#">
+                <span class="btn__text">Read more</span>
+              </a>
+            </div>
+            <picture>
+              <source
+                srcset="assets/images/content/about-02.webp"
+                type="image/webp"
+              />
+              <img
+                class="about-us__image wow animate__fadeInRight animate__animated"
+                src="assets/images/content/about-02.png"
+                alt=""
+              />
+            </picture>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div class="container">
           <div class="footer__body">
             <div class="footer__top">
               <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
+                <a class="footer__top-link link" href="#">Linklink</a>
               </h4>
               <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
+                <a class="footer__top-link link" href="#">Linklink</a>
               </h4>
               <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
+                <a class="footer__top-link link" href="#">Linklink</a>
               </h4>
               <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
+                <a class="footer__top-link link" href="#">Linklink</a>
               </h4>
               <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
+                <a class="footer__top-link link" href="#">Linklink</a>
               </h4>
             </div>
             <div class="footer__middle">
@@ -191,13 +325,16 @@
                   </ul>
                   <ul class="footer__contact-links">
                     <li class="footer__contact-links-item">
-                      <a class="footer__contact-link" href="tel:0000000000">
+                      <a
+                        class="footer__contact-link link"
+                        href="tel:0000000000"
+                      >
                         +0000000000
                       </a>
                     </li>
                     <li class="footer__contact-links-item">
                       <a
-                        class="footer__contact-link"
+                        class="footer__contact-link link"
                         href="mailto:gmail.gmail@gmail.com"
                       >
                         gmail.gmail@gmail.com
@@ -238,6 +375,8 @@
         </div>
       </footer>
     </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
