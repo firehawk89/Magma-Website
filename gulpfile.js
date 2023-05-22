@@ -21,28 +21,33 @@ const srcPath = "./src";
 const path = {
   src: {
     html: `${srcPath}/*.html`,
+    css: `${srcPath}/css/*.css`,
     scss: `${srcPath}/scss/style.scss`,
     js: `${srcPath}/js/**/*.js`,
     img: `${srcPath}/assets/img/**/*.{jpg,jpeg,png,svg,gif}`,
+    videos: `${srcPath}/assets/vids/**/*.{mp4,mov,webm,mkv,avi}`,
     fonts: `${srcPath}/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}`,
   },
   build: {
     html: `${buildPath}/`,
     css: `${buildPath}/css/`,
     js: `${buildPath}/js/`,
-    img: `${buildPath}/img/`,
+    img: `${buildPath}/assets/images`,
+    videos: `${buildPath}/assets/videos`,
     fonts: `${buildPath}/fonts/`,
   },
   watch: {
     html: `${srcPath}/*.html`,
+    css: `${srcPath}/css/*.css`,
     scss: `${srcPath}/scss/**/*.scss`,
     js: `${srcPath}/js/**/*.js`,
     img: `${srcPath}/assets/img/**/*.{jpg,jpeg,png,svg,gif}`,
+    videos: `${srcPath}/assets/vids/**/*.{mp4,mov,webm,mkv,avi}`,
     fonts: `${srcPath}/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}`,
   },
   clean: `${buildPath}/*`,
   ignore: {
-    img: `!${buildPath}/img`,
+    img: `!${buildPath}/assets`,
     fonts: `!${buildPath}/fonts`,
   },
 };
@@ -64,6 +69,12 @@ function htmlTask() {
 }
 
 function cssTask() {
+  return src(path.src.css)
+    .pipe(dest(path.build.css))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
+function scssTask() {
   return src(path.src.scss)
     .pipe(plumber({ errorHandler: notifier.error }))
     .pipe(autoprefixer({ overrideBrowserslist: ["last 5 versions"] }))
@@ -78,6 +89,8 @@ function cssTask() {
 function jsTask() {
   return (
     src(path.src.js)
+      .pipe(plumber({ errorHandler: notifier.error }))
+      .pipe(babel({ presets: ["@babel/env"] }))
       .pipe(dest(path.build.js))
       /*.pipe(src(path.src.js))*/
       /*src(["node_modules/swiper/swiper-bundle.js", path.src.js])*/
@@ -111,6 +124,12 @@ function imgTask() {
     .pipe(dest(path.build.img));
 }
 
+function videoTask() {
+  return src(path.src.videos)
+    .pipe(dest(path.build.videos))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
 function fontsTask() {
   return src(path.src.fonts)
     .pipe(plumber({ errorHandler: notifier.error }))
@@ -127,13 +146,23 @@ function cleanDest() {
 
 function watcher() {
   watch([path.watch.html], htmlTask);
-  watch([path.watch.scss], cssTask);
+  watch([path.watch.css], cssTask);
+  watch([path.watch.scss], scssTask);
   watch([path.watch.js], jsTask);
   watch([path.watch.img], imgTask);
+  watch([path.watch.videos], videoTask);
   watch([path.watch.fonts], fontsTask);
 }
 
-const tasks = parallel(htmlTask, cssTask, jsTask, imgTask, fontsTask);
+const tasks = parallel(
+  htmlTask,
+  cssTask,
+  scssTask,
+  jsTask,
+  imgTask,
+  videoTask,
+  fontsTask
+);
 const dev = series(cleanDest, tasks, parallel(watcher, sync));
 
 exports.default = dev;
