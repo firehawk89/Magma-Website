@@ -121,12 +121,14 @@
               <li class="skills__column">
                 <ul class="skills__sub-column">
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0s"
                   >
                     <a class="skills__link link" href="#">Video production</a>
                   </li>
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0.9s"
                   >
                     <a class="skills__link link" href="#">DaVinci coloring</a>
                   </li>
@@ -135,17 +137,20 @@
               <li class="skills__column">
                 <ul class="skills__sub-column">
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0.3s"
                   >
                     <a class="skills__link link" href="#">2D and 3D motion</a>
                   </li>
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="1.2s"
                   >
                     <a class="skills__link link" href="#">VR and AR design</a>
                   </li>
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="1.8s"
                   >
                     <a class="skills__link link" href="#">Photography</a>
                   </li>
@@ -154,12 +159,14 @@
               <li class="skills__column">
                 <ul class="skills__sub-column">
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0.6s"
                   >
                     <a class="skills__link link" href="#">Graphic design</a>
                   </li>
                   <li
-                    class="skills__item wow animate__fadeOut animate__animated"
+                    class="skills__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="1.5s"
                   >
                     <a class="skills__link link" href="#">Postproduction</a>
                   </li>
@@ -215,23 +222,23 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__body">
-            <div class="footer__top">
-              <h4 class="footer__top-item">
+            <ul class="footer__top">
+              <li class="footer__top-item">
                 <a class="footer__top-link link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
+              </li>
+              <li class="footer__top-item">
                 <a class="footer__top-link link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
+              </li>
+              <li class="footer__top-item">
                 <a class="footer__top-link link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
+              </li>
+              <li class="footer__top-item">
                 <a class="footer__top-link link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
+              </li>
+              <li class="footer__top-item">
                 <a class="footer__top-link link" href="#">Linklink</a>
-              </h4>
-            </div>
+              </li>
+            </ul>
             <div class="footer__middle">
               <!-- <h2 class="footer__title">Contact us</h2> -->
               <div class="footer__title">
@@ -376,7 +383,9 @@
       </footer>
     </div>
     <script src="js/wow.min.js"></script>
-    <script src="js/animation.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script src="js/index.js"></script>
   </body>
 </html>

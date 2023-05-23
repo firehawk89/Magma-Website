@@ -1,0 +1,7 @@
+body {
+  &.is-locked {
+    max-height: 100vh;
+    max-height: 100svh;
+    overflow: hidden;
+  }
+}

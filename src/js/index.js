@@ -3,12 +3,7 @@ const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
 
 menuIcon.addEventListener("click", () => {
-  if (document.body.style.overflow === "hidden") {
-    document.body.removeAttribute("style");
-  } else {
-    document.body.style.overflow = "hidden";
-  }
-
+  document.body.classList.toggle("is-locked");
   menuIcon.classList.toggle("is-active");
   menu.classList.toggle("is-opened");
 });

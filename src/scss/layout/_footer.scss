@@ -18,7 +18,7 @@
     border-bottom: 3px solid $color-light;
 
     &-link {
-      transition: none;
+      @include font-title-h4;
 
       @include _992 {
         @include font-title-h4-mobile;
