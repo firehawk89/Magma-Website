@@ -27,14 +27,16 @@ const path = {
     img: `${srcPath}/assets/img/**/*.{jpg,jpeg,png,svg,gif}`,
     videos: `${srcPath}/assets/vids/**/*.{mp4,mov,webm,mkv,avi}`,
     fonts: `${srcPath}/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}`,
+    favicons: `${srcPath}/favicon.{ico,png}`,
   },
   build: {
     html: `${buildPath}/`,
     css: `${buildPath}/css/`,
     js: `${buildPath}/js/`,
-    img: `${buildPath}/assets/images`,
-    videos: `${buildPath}/assets/videos`,
+    img: `${buildPath}/assets/images/`,
+    videos: `${buildPath}/assets/videos/`,
     fonts: `${buildPath}/fonts/`,
+    favicons: `${buildPath}/`,
   },
   watch: {
     html: `${srcPath}/*.html`,
@@ -44,6 +46,7 @@ const path = {
     img: `${srcPath}/assets/img/**/*.{jpg,jpeg,png,svg,gif}`,
     videos: `${srcPath}/assets/vids/**/*.{mp4,mov,webm,mkv,avi}`,
     fonts: `${srcPath}/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}`,
+    favicons: `${srcPath}/favicon.{ico,png}`,
   },
   clean: `${buildPath}/*`,
   ignore: {
@@ -139,6 +142,10 @@ function fontsTask() {
     .pipe(dest(path.build.fonts));
 }
 
+function faviconsTask() {
+  return src(path.src.favicons).pipe(dest(path.build.favicons));
+}
+
 function cleanDest() {
   return del([path.clean, path.ignore.img, path.ignore.fonts]);
 }
@@ -151,6 +158,7 @@ function watcher() {
   watch([path.watch.img], imgTask);
   watch([path.watch.videos], videoTask);
   watch([path.watch.fonts], fontsTask);
+  watch([path.watch.favicons], faviconsTask);
 }
 
 const tasks = parallel(
@@ -160,7 +168,8 @@ const tasks = parallel(
   jsTask,
   imgTask,
   videoTask,
-  fontsTask
+  fontsTask,
+  faviconsTask
 );
 const dev = series(cleanDest, tasks, parallel(watcher, sync));
 
