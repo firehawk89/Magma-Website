@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magma</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -107,17 +109,28 @@
               </a>
             </div>
           </div>
+          <picture>
+            <source
+              srcset="assets/images/hero-bg-home.webp"
+              type="image/webp"
+            />
+            <img
+              class="hero__background"
+              src="assets/images/hero-bg-home.jpg"
+              alt=""
+            />
+          </picture>
         </section>
         <div class="skills">
           <div class="container">
             <div class="skills__title">
               <img
                 class="skills__title-img"
-                src="assets/images/what-we-can-do.svg"
+                src="assets/images/skills-title.svg"
                 alt=""
               />
             </div>
-            <ul class="skills__items">
+            <!--  <ul class="skills__items">
               <li class="skills__column">
                 <ul class="skills__sub-column">
                   <li
@@ -172,6 +185,70 @@
                   </li>
                 </ul>
               </li>
+            </ul> -->
+            <ul class="skills__items items-list">
+              <li class="items-list__row">
+                <ul class="items-list__sub-row">
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0s"
+                  >
+                    <a class="items-list__link link" href="#"
+                      >Video production</a
+                    >
+                  </li>
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0.3s"
+                  >
+                    <a class="items-list__link link" href="#"
+                      >2D and 3D motion</a
+                    >
+                  </li>
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0.6s"
+                  >
+                    <a class="items-list__link link" href="#">Graphic design</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="items-list__row">
+                <ul class="items-list__sub-row">
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="0.9s"
+                  >
+                    <a class="items-list__link link" href="#"
+                      >DaVinci coloring</a
+                    >
+                  </li>
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="1.2s"
+                  >
+                    <a class="items-list__link link" href="#"
+                      >VR and AR design</a
+                    >
+                  </li>
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="1.5s"
+                  >
+                    <a class="items-list__link link" href="#">Postproduction</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="items-list__row">
+                <ul class="items-list__sub-row">
+                  <li
+                    class="items-list__item wow animate__fadeIn animate__animated"
+                    data-wow-delay="1.8s"
+                  >
+                    <a class="items-list__link link" href="#">Photography</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -218,8 +295,174 @@
             </picture>
           </div>
         </section>
+        <section class="abilities">
+          <div class="container">
+            <ul class="abilities__items">
+              <li class="abilities__item">
+                <h3 class="abilities__item-title">Support 24/7</h3>
+                <button class="abilities__item-toggler">
+                  <span class="abilities__item-toggler-bar"></span>
+                </button>
+                <div class="abilities__item-text-box">
+                  <p class="abilities__item-text">
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                  </p>
+                </div>
+              </li>
+              <li class="abilities__item">
+                <h3 class="abilities__item-title">Quality</h3>
+                <button class="abilities__item-toggler">
+                  <span class="abilities__item-toggler-bar"></span>
+                </button>
+                <div class="abilities__item-text-box">
+                  <p class="abilities__item-text">
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                  </p>
+                </div>
+              </li>
+              <li class="abilities__item">
+                <h3 class="abilities__item-title">Responsibility</h3>
+                <button class="abilities__item-toggler">
+                  <span class="abilities__item-toggler-bar"></span>
+                </button>
+                <div class="abilities__item-text-box">
+                  <p class="abilities__item-text">
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="idea">
+          <div class="container idea__container">
+            <div class="idea__title">
+              <img
+                class="idea__title-img"
+                src="./assets/images/idea-title.svg"
+                alt=""
+              />
+            </div>
+            <p class="idea__text">
+              Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
+              amet. Pellentesque commodo lacus at sodales sodales. Quisque
+              sagittis orci ut diam condimentum, vel euismod erat placerat. In
+              iaculis arcu eros, eget tempus orci facilisis id.Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in
+              hendrerit urna. Pellentesque sit amet sapien fringilla, mattis
+              ligula consectetur, ultrices mauris.
+            </p>
+            <a class="idea__btn btn btn--black" href="#footer">
+              <span class="btn__text">Contact</span>
+            </a>
+          </div>
+        </div>
+        <div class="reviews">
+          <div class="container reviews__container">
+            <div class="reviews__body">
+              <div class="reviews__title">
+                <img
+                  class="reviews__title-img"
+                  src="./assets/images/reviews-title.svg"
+                  alt=""
+                />
+              </div>
+              <div class="reviews__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="reviews__item swiper-slide">
+                    <div class="reviews__content">
+                      <!-- <img
+                        class="reviews__image"
+                        src="./assets/images/content/reviews-author.png"
+                        alt=""
+                      /> -->
+                      <div class="reviews__content-header">
+                        <img
+                          class="reviews__image"
+                          src="./assets/images/content/reviews-author.png"
+                          alt=""
+                        />
+                        <div class="reviews__content-header-text">
+                          <h4 class="reviews__author">Curabitur</h4>
+                          <span class="reviews__date">15.04.2023</span>
+                        </div>
+                      </div>
+                      <p class="reviews__text">
+                        Curabitur pellentesque nibh nibh, at maximus ante
+                        fermentum sit amet. Pellentesque commodo lacus at
+                        sodales sodales. Quisque sagittis orci ut diam
+                        condimentum, vel euismod erat placerat. In iaculis arcu
+                        eros, eget tempus orci facilisis id.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Ut et massa mi.
+                        Aliquam in hendrerit urna. Pellentesque sit amet sapien
+                        fringilla, mattis ligula consectetur, ultrices mauris.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reviews__item swiper-slide">
+                    <div class="reviews__content">
+                      <div class="reviews__content-header">
+                        <img
+                          class="reviews__image"
+                          src="./assets/images/content/reviews-author.png"
+                          alt=""
+                        />
+                        <h4 class="reviews__author">Curabitur</h4>
+                        <span class="reviews__date">15.04.2023</span>
+                      </div>
+                      <p class="reviews__text">
+                        Curabitur pellentesque nibh nibh, at maximus ante
+                        fermentum sit amet. Pellentesque commodo lacus at
+                        sodales sodales. Quisque sagittis orci ut diam
+                        condimentum, vel euismod erat placerat. In iaculis arcu
+                        eros, eget tempus orci facilisis id.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Ut et massa mi.
+                        Aliquam in hendrerit urna. Pellentesque sit amet sapien
+                        fringilla, mattis ligula consectetur, ultrices mauris.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reviews__item swiper-slide">
+                    <div class="reviews__content">
+                      <div class="reviews__content-header">
+                        <img
+                          class="reviews__image"
+                          src="./assets/images/content/reviews-author.png"
+                          alt=""
+                        />
+                        <h4 class="reviews__author">Curabitur</h4>
+                        <span class="reviews__date">15.04.2023</span>
+                      </div>
+                      <p class="reviews__text">
+                        Curabitur pellentesque nibh nibh, at maximus ante
+                        fermentum sit amet. Pellentesque commodo lacus at
+                        sodales sodales. Quisque sagittis orci ut diam
+                        condimentum, vel euismod erat placerat. In iaculis arcu
+                        eros, eget tempus orci facilisis id.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Ut et massa mi.
+                        Aliquam in hendrerit urna. Pellentesque sit amet sapien
+                        fringilla, mattis ligula consectetur, ultrices mauris.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__btn-prev swiper-button-prev"></div>
+                <div class="reviews__btn-next swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
-      <footer class="footer">
+      <footer id="footer" class="footer">
         <div class="container">
           <div class="footer__body">
             <ul class="footer__top">
@@ -386,6 +629,9 @@
     <script>
       new WOW().init();
     </script>
+    <script src="js/accordion.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

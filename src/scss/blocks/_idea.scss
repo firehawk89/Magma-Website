@@ -1,0 +1,31 @@
+.idea {
+  padding: 42px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-img {
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 16px;
+    max-width: 577px;
+
+    @include _992 {
+      @include font-text-mob;
+    }
+  }
+
+  &__btn {
+    margin-top: 16px;
+    align-self: flex-end;
+
+    @include _768 {
+      margin-top: 75px;
+      align-self: center;
+    }
+  }
+}

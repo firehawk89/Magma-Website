@@ -21,7 +21,7 @@
       @include font-title-h4;
 
       @include _992 {
-        @include font-title-h4-mobile;
+        @include font-title-h4-mob;
       }
     }
 
@@ -89,7 +89,7 @@
     @include font-title-h4;
 
     @include _992 {
-      @include font-title-h4-mobile;
+      @include font-title-h4-mob;
     }
   }
 

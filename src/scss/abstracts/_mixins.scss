@@ -5,6 +5,11 @@
   );
 }
 
+@mixin font-text-mob {
+  font-size: 16px;
+  line-height: 21px;
+}
+
 @mixin font-title-h1 {
   font-family: "Rock Star";
   font-size: 147px;
@@ -41,7 +46,7 @@
   line-height: 36px;
 }
 
-@mixin font-title-h4-mobile {
+@mixin font-title-h4-mob {
   font-family: "Rock Star";
   font-size: 18px;
   line-height: 23px;
@@ -51,6 +56,24 @@
   font-family: "Rock Star";
   font-size: 22px;
   line-height: 29px;
+}
+
+@mixin _1534 {
+  @media (max-width: 1533.98px) {
+    @content;
+  }
+}
+
+@mixin _1366 {
+  @media (max-width: 1365.98px) {
+    @content;
+  }
+}
+
+@mixin _1200 {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
 }
 
 @mixin _992 {
