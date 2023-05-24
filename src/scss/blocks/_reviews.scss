@@ -48,9 +48,14 @@
     }
   }
 
-  &__image {
+  &__author {
     width: 98px;
     height: 98px;
+
+    &-img {
+      object-fit: cover;
+      object-position: center center;
+    }
 
     @include min_992 {
       position: absolute;
@@ -100,7 +105,7 @@
     }
   }
 
-  &__author {
+  &__title {
     @include _768 {
       @include font-title-h4-mob;
     }
