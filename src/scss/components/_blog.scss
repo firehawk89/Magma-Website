@@ -1,0 +1,35 @@
+.blog {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    &-photo {
+      &-img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-title {
+      max-width: 303px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: $color-orange;
+      }
+    }
+
+    &-date {
+      color: $color-orange;
+
+      @include _768 {
+        @include font-text-mob;
+      }
+    }
+  }
+}
