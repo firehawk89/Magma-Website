@@ -94,20 +94,28 @@ $(document).ready(function () {
         },
       ],
     });
+
+    $(".short-blog__items-body").on(
+      "afterChange",
+      function (event, slick, currentSlide) {
+        console.log(slick, currentSlide);
+        if (slick.$slides.length - 1 == currentSlide) {
+          $(".short-blog__btn-next-box").addClass("is-hidden");
+        } else if (currentSlide == 0) {
+          $(".short-blog__btn-prev-box").addClass("is-hidden");
+        } else {
+          $(".short-blog__btn-next-box").removeClass("is-hidden");
+          $(".short-blog__btn-prev-box").removeClass("is-hidden");
+        }
+      }
+    );
   }
 });
 
-$(".short-blog__items-body").on(
-  "afterChange",
-  function (event, slick, currentSlide) {
-    console.log(slick, currentSlide);
-    if (slick.$slides.length - 1 == currentSlide) {
-      $(".short-blog__btn-next-box").addClass("is-hidden");
-    } else if (currentSlide == 0) {
-      $(".short-blog__btn-prev-box").addClass("is-hidden");
-    } else {
-      $(".short-blog__btn-next-box").removeClass("is-hidden");
-      $(".short-blog__btn-prev-box").removeClass("is-hidden");
-    }
-  }
-);
+if ($(".short-portfolio__items") != null) {
+  $(".short-portfolio__items").slick({
+    arrows: false,
+    slidesToShow: 1,
+    infinite: false,
+  });
+}

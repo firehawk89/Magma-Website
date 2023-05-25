@@ -3,17 +3,11 @@
 
   &__body {
     position: relative;
-  }
 
-  &__header {
-    position: absolute;
-    width: 93.8%;
-    top: 5.8%;
-    left: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    @include _768 {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -23,23 +17,64 @@
     text-transform: uppercase;
     color: $color-orange;
     @include responsive-value("font-size", 132, 36);
-    @include responsive-value("line-height", 118, 48.49); //157.5 34
+    @include responsive-value("line-height", 118, 48.49);
+    transition: all 0.5s ease;
+
+    &.is-hidden {
+      translate: -150% 0;
+    }
+
+    @include min_768 {
+      position: absolute;
+      top: 5.8%;
+      left: 0;
+      z-index: 1;
+    }
   }
 
   &__btn {
+    @include min_768 {
+      position: absolute;
+      top: 16.89%;
+      right: 8.79%;
+      z-index: 1;
+    }
+
+    @include _1200 {
+      top: 14.44%;
+      right: 4.39%;
+    }
+
+    @include _768 {
+      margin-top: 38px;
+      top: 0;
+      right: 0;
+      align-self: center;
+    }
   }
 
   &__items {
+    border-radius: 40px;
     margin: 0 -62px;
 
     @include _992 {
       margin: 0 -16px;
     }
+
+    @include _768 {
+      margin: 27px -16px 0px -16px;
+    }
   }
 
   &__item {
+    padding: 0 18.5px;
+
     &-video-box {
       padding-bottom: 49.4%;
+
+      @include _768 {
+        padding-bottom: 163%;
+      }
     }
 
     &-video {
@@ -48,7 +83,16 @@
         bottom: 7.52%;
         left: 5.8%;
         @include font-title-h4;
+
+        @include _1200 {
+          right: 5.8%;
+          @include font-title-h4-mob;
+        }
       }
+    }
+
+    @include _992 {
+      padding: 0 11.5px;
     }
   }
 }
