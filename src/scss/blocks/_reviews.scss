@@ -16,10 +16,14 @@
   }
 
   &__slider {
-    margin-top: 34px;
+    position: relative;
+    margin-top: -60px;
+
+    @include _1200 {
+      margin-top: -40px;
+    }
 
     @include min_992 {
-      margin-top: -60px;
       position: absolute;
       top: 0;
       right: 0;
@@ -53,6 +57,7 @@
   }
 
   &__item {
+    position: relative;
     padding: 55px 62px 55px 75px;
     display: flex;
     gap: 21px;
@@ -166,18 +171,34 @@
     }
   }
 
-  &__btn-next,
-  &__btn-prev {
-    top: 40%;
-    color: $color-dark;
-
-    &::after {
-      font-size: 56px;
-    }
+  &__btn-prev,
+  &__btn-next {
+    cursor: pointer;
+    position: absolute;
+    width: 31px;
+    height: 58px;
+    background-color: $color-dark;
+    top: 28.18%;
+    z-index: 3;
+    @include mask("../assets/images/arrow.svg");
 
     @include _1200 {
       top: 50%;
+      translate: 0 -50%;
     }
+
+    @include _992 {
+      display: none;
+    }
+  }
+
+  &__btn-prev {
+    transform: rotate(180deg);
+    left: 22px;
+  }
+
+  &__btn-next {
+    right: 11px;
   }
 
   @include _992 {

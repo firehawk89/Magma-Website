@@ -5,6 +5,17 @@
   );
 }
 
+@mixin mask($url) {
+  mask-image: ($url);
+  -webkit-mask-image: url($url);
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center center;
+  -webkit-mask-position: center center;
+}
+
 @mixin font-text-mob {
   font-size: 16px;
   line-height: 21px;

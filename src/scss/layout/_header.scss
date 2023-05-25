@@ -41,12 +41,15 @@
   }
 
   &__logo-img {
-    display: inline-block;
-    vertical-align: middle;
     width: 60px;
     height: 47px;
-    fill: $color-orange;
+    background-color: $color-orange;
+    @include mask("../assets/images/icons/logo.svg");
     transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $color-light;
+    }
 
     @include _768 {
       width: 40px;
