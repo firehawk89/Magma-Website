@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -376,9 +377,9 @@
                   alt=""
                 />
               </div>
-              <div class="reviews__slider swiper">
-                <div class="swiper-wrapper">
-                  <div class="reviews__item swiper-slide">
+              <div class="reviews__slider">
+                <div class="reviews__slider-body">
+                  <div class="reviews__item">
                     <div class="reviews__content">
                       <!-- <img
                         class="reviews__image"
@@ -420,7 +421,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="reviews__item swiper-slide">
+                  <div class="reviews__item">
                     <div class="reviews__content">
                       <!-- <img
                         class="reviews__image"
@@ -462,7 +463,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="reviews__item swiper-slide">
+                  <div class="reviews__item">
                     <div class="reviews__content">
                       <!-- <img
                         class="reviews__image"
@@ -505,8 +506,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="reviews__btn-prev swiper-button-prev"></div>
-                <div class="reviews__btn-next swiper-button-next"></div>
+                <!--                 <div class="reviews__btn-prev swiper-button-prev"></div>
+                <div class="reviews__btn-next swiper-button-next"></div> -->
               </div>
             </div>
           </div>
@@ -518,152 +519,151 @@
               <p class="short-blog__text">
                 Search in our blog for creative video ads
               </p>
-              <div class="blog__items short-blog__items swiper">
-                <div class="short-blog__items-body swiper-wrapper">
-                  <a class="blog__item short-blog__item swiper-slide" href="#">
-                    <div class="blog__item-photo short-blog__item-photo">
-                      <picture>
-                        <source
-                          srcset="./assets/images/content/blog-01.png"
-                          type="image/webp"
-                        />
-                        <img
-                          class="blog__item-photo-img"
-                          src="./assets/images/content/blog-01.png"
-                          alt=""
-                        />
-                      </picture>
-                    </div>
-                    <div class="blog__item-text">
-                      <h4 class="blog__item-title short-blog__item-title">
-                        Curabitur pellentesque nibh nibh
-                      </h4>
-                      <time datetime="2023-05-11" class="blog__item-date"
-                        >11.05.2023</time
-                      >
-                    </div>
-                  </a>
-                  <a class="blog__item short-blog__item swiper-slide" href="#">
-                    <div
-                      class="blog__item-photo short-blog__item-photo short-blog__item-photo--small"
+              <div class="short-blog__content">
+                <a
+                  class="blog__item short-blog__item short-blog__item--latest"
+                  href="#"
+                >
+                  <div class="blog__item-photo short-blog__item-photo">
+                    <picture>
+                      <source
+                        srcset="./assets/images/content/blog-01.png"
+                        type="image/webp"
+                      />
+                      <img
+                        class="blog__item-photo-img"
+                        src="./assets/images/content/blog-01.png"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                  <div class="blog__item-text">
+                    <h4 class="blog__item-title short-blog__item-title">
+                      Curabitur pellentesque nibh nibh
+                    </h4>
+                    <time datetime="2023-05-11" class="blog__item-date"
+                      >11.05.2023</time
                     >
-                      <picture>
-                        <source
-                          srcset="./assets/images/content/blog-01.png"
-                          type="image/webp"
-                        />
-                        <img
-                          class="blog__item-photo-img"
-                          src="./assets/images/content/blog-01.png"
-                          alt=""
-                        />
-                      </picture>
-                    </div>
-                    <div class="blog__item-text">
-                      <h4 class="blog__item-title short-blog__item-title">
-                        Curabitur pellentesque nibh nibh
-                      </h4>
-                      <time datetime="2023-05-11" class="blog__item-date"
-                        >11.05.2023</time
-                      >
-                    </div>
-                  </a>
-                  <a class="blog__item short-blog__item swiper-slide" href="#">
-                    <div class="blog__item-photo short-blog__item-photo">
-                      <picture>
-                        <source
-                          srcset="./assets/images/content/blog-01.png"
-                          type="image/webp"
-                        />
-                        <img
-                          class="blog__item-photo-img"
-                          src="./assets/images/content/blog-01.png"
-                          alt=""
-                        />
-                      </picture>
-                    </div>
-                    <div class="blog__item-text">
-                      <h4 class="blog__item-title short-blog__item-title">
-                        Curabitur pellentesque nibh nibh
-                      </h4>
-                      <time datetime="2023-05-11" class="blog__item-date"
-                        >11.05.2023</time
-                      >
-                    </div>
-                  </a>
-                  <a class="blog__item short-blog__item swiper-slide" href="#">
-                    <div
-                      class="blog__item-photo short-blog__item-photo short-blog__item-photo--small"
-                    >
-                      <picture>
-                        <source
-                          srcset="./assets/images/content/blog-01.png"
-                          type="image/webp"
-                        />
-                        <img
-                          class="blog__item-photo-img"
-                          src="./assets/images/content/blog-01.png"
-                          alt=""
-                        />
-                      </picture>
-                    </div>
-                    <div class="blog__item-text">
-                      <h4 class="blog__item-title short-blog__item-title">
-                        Curabitur pellentesque nibh nibh
-                      </h4>
-                      <time datetime="2023-05-11" class="blog__item-date"
-                        >11.05.2023</time
-                      >
-                    </div>
-                  </a>
-                  <a class="blog__item short-blog__item swiper-slide" href="#">
-                    <div class="blog__item-photo short-blog__item-photo">
-                      <picture>
-                        <source
-                          srcset="./assets/images/content/blog-01.png"
-                          type="image/webp"
-                        />
-                        <img
-                          class="blog__item-photo-img"
-                          src="./assets/images/content/blog-01.png"
-                          alt=""
-                        />
-                      </picture>
-                    </div>
-                    <div class="blog__item-text">
-                      <h4 class="blog__item-title short-blog__item-title">
-                        Curabitur pellentesque nibh nibh
-                      </h4>
-                      <time datetime="2023-05-11" class="blog__item-date"
-                        >11.05.2023</time
-                      >
-                    </div>
-                  </a>
-                  <a class="blog__item short-blog__item swiper-slide" href="#">
-                    <div
-                      class="blog__item-photo short-blog__item-photo short-blog__item-photo--small"
-                    >
-                      <picture>
-                        <source
-                          srcset="./assets/images/content/blog-01.png"
-                          type="image/webp"
-                        />
-                        <img
-                          class="blog__item-photo-img"
-                          src="./assets/images/content/blog-01.png"
-                          alt=""
-                        />
-                      </picture>
-                    </div>
-                    <div class="blog__item-text">
-                      <h4 class="blog__item-title short-blog__item-title">
-                        Curabitur pellentesque nibh nibh
-                      </h4>
-                      <time datetime="2023-05-11" class="blog__item-date"
-                        >11.05.2023</time
-                      >
-                    </div>
-                  </a>
+                  </div>
+                </a>
+                <div class="short-blog__items">
+                  <div class="short-blog__items-body">
+                    <a class="blog__item short-blog__item" href="#">
+                      <div class="blog__item-photo short-blog__item-photo">
+                        <picture>
+                          <source
+                            srcset="./assets/images/content/blog-01.png"
+                            type="image/webp"
+                          />
+                          <img
+                            class="blog__item-photo-img"
+                            src="./assets/images/content/blog-01.png"
+                            alt=""
+                          />
+                        </picture>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title short-blog__item-title">
+                          Curabitur pellentesque nibh nibh
+                        </h4>
+                        <time datetime="2023-05-11" class="blog__item-date"
+                          >11.05.2023</time
+                        >
+                      </div>
+                    </a>
+                    <a class="blog__item short-blog__item" href="#">
+                      <div class="blog__item-photo short-blog__item-photo">
+                        <picture>
+                          <source
+                            srcset="./assets/images/content/blog-01.png"
+                            type="image/webp"
+                          />
+                          <img
+                            class="blog__item-photo-img"
+                            src="./assets/images/content/blog-01.png"
+                            alt=""
+                          />
+                        </picture>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title short-blog__item-title">
+                          Curabitur pellentesque nibh nibh
+                        </h4>
+                        <time datetime="2023-05-11" class="blog__item-date"
+                          >11.05.2023</time
+                        >
+                      </div>
+                    </a>
+                    <a class="blog__item short-blog__item" href="#">
+                      <div class="blog__item-photo short-blog__item-photo">
+                        <picture>
+                          <source
+                            srcset="./assets/images/content/blog-01.png"
+                            type="image/webp"
+                          />
+                          <img
+                            class="blog__item-photo-img"
+                            src="./assets/images/content/blog-01.png"
+                            alt=""
+                          />
+                        </picture>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title short-blog__item-title">
+                          Curabitur pellentesque nibh nibh
+                        </h4>
+                        <time datetime="2023-05-11" class="blog__item-date"
+                          >11.05.2023</time
+                        >
+                      </div>
+                    </a>
+                    <a class="blog__item short-blog__item" href="#">
+                      <div class="blog__item-photo short-blog__item-photo">
+                        <picture>
+                          <source
+                            srcset="./assets/images/content/blog-01.png"
+                            type="image/webp"
+                          />
+                          <img
+                            class="blog__item-photo-img"
+                            src="./assets/images/content/blog-01.png"
+                            alt=""
+                          />
+                        </picture>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title short-blog__item-title">
+                          Curabitur pellentesque nibh nibh
+                        </h4>
+                        <time datetime="2023-05-11" class="blog__item-date"
+                          >11.05.2023</time
+                        >
+                      </div>
+                    </a>
+                    <a class="blog__item short-blog__item" href="#">
+                      <div class="blog__item-photo short-blog__item-photo">
+                        <picture>
+                          <source
+                            srcset="./assets/images/content/blog-01.png"
+                            type="image/webp"
+                          />
+                          <img
+                            class="blog__item-photo-img"
+                            src="./assets/images/content/blog-01.png"
+                            alt=""
+                          />
+                        </picture>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title short-blog__item-title">
+                          Curabitur pellentesque nibh nibh
+                        </h4>
+                        <time datetime="2023-05-11" class="blog__item-date"
+                          >11.05.2023</time
+                        >
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
               <a
@@ -845,6 +845,8 @@
     </script>
     <script src="js/accordion.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/index.js"></script>
   </body>

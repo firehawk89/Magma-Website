@@ -28,8 +28,28 @@
     }
 
     @include _992 {
-      margin: 34px -16px 0;
+      margin: 34px -16px 0px;
     }
+
+    &-body,
+    .slick-list,
+    .slick-track {
+      height: 100%;
+    }
+
+    /*     .slick-slide {
+      //margin: 0 11.5px;
+    }
+
+    .slick-track {
+      //margin: 0 11.5px;
+    }
+
+    .slick-track {
+      @include _992 {
+        display: flex;
+      }
+    } */
   }
 
   &__item {
@@ -45,6 +65,12 @@
 
     @include _992 {
       padding: 22px 27px 24px 28px;
+    }
+
+    @include _992 {
+      /* &:not(:last-child) {
+        margin-right: 23px;
+      } */
     }
   }
 
@@ -101,7 +127,7 @@
     @include _992 {
       padding: 0;
       flex-direction: column-reverse;
-      gap: 22px;
+      gap: 20px;
     }
   }
 

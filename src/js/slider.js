@@ -1,6 +1,6 @@
 /* REVIEWS SLIDER */
-if (document.querySelector(".reviews__slider") != null) {
-  new Swiper(".reviews__slider", {
+/* if (document.querySelector(".reviews__slider") != null) {
+  let reviewsSlider = new Swiper(".reviews__slider", {
     slidesPerView: 1.3,
     spaceBetween: 23,
 
@@ -24,25 +24,71 @@ if (document.querySelector(".reviews__slider") != null) {
       },
     },
   });
-}
+} */
 
-/* BLOG SLIDER */
-const homeBlogItemsContainer = document.querySelector(".short-blog__items");
-/* const homeBlogItemsBody = document.querySelector(".home-blog__items-body");
-const blogItems = document.querySelectorAll(".blog__item"); */
+/* SHORT BLOG SLIDER */
+/* if (document.querySelector(".short-blog__items") != null) {
+  let shortBlogSlider = new Swiper(".short-blog__items", {
+    slidesPerView: 1.1,
+    spaceBetween: 23,
+    direction: "horizontal",
 
-if (homeBlogItemsContainer != null) {
-  if (window.matchMedia("(max-width: 767.98px)").matches) {
-    /* slider initialization */
-    /*     homeBlogItemsContainer.classList.add("swiper");
-    homeBlogItemsBody.classList.add("swiper-wrapper");
-    blogItems.forEach((item) => {
-      item.classList.add("swiper-slide");
-    }); */
+    navigation: {
+      enabled: false,
+    },
 
-    new Swiper(".short-blog__items", {
-      slidesPerView: 1.1,
-      spaceBetween: 23,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.6,
+        direction: "vertical",
+      },
+    },
+  });
+} */
+
+$(document).ready(function () {
+  if ($(".reviews__slider-body") != null) {
+    $(".reviews__slider-body").slick({
+      arrows: false,
+      slidesToShow: 1.25,
+      infinite: false,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1.5,
+          },
+        },
+      ],
     });
   }
-}
+
+  if ($(".short-blog__items-body") != null) {
+    $(".short-blog__items-body").slick({
+      arrows: false,
+      slidesToShow: 1.1,
+      infinite: false,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            slidesToShow: 1.6,
+            vertical: true,
+            verticalSwiping: true,
+            nextArrow: ".short-blog__title",
+            prevArrow: ".short-blog__text",
+          },
+        },
+      ],
+    });
+  }
+});

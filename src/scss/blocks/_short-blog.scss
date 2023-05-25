@@ -1,4 +1,6 @@
 .short-blog {
+  padding: 98px 0px 98px 0px;
+
   &__body {
     position: relative;
     display: flex;
@@ -32,24 +34,65 @@
     }
   }
 
+  &__content {
+    margin: 31px -16px 0px -16px;
+
+    @include min_768 {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0px 0px 0px;
+    }
+  }
+
   &__items {
-    margin: 20px 0px 0px 0px;
+    width: 40.92%;
 
     &-body {
-      @include min_768 {
-        display: grid;
-        grid-template-columns: 49.36% 40.92%;
-        justify-content: space-between;
-        row-gap: 32px;
+      .slick-track {
+        display: flex;
+
+        @include min_768 {
+          display: block;
+          margin: -10px 0px 0px 0px;
+        }
+      }
+
+      .short-blog__item {
+        display: flex;
+        gap: 19px;
+
+        @include _768 {
+          &:not(:last-child) {
+            margin-right: 23px;
+          }
+        }
+
+        @include min_768 {
+          margin: 10px 0px 0px 0px;
+        }
+      }
+
+      .blog__item-photo {
+        @include min_768 {
+          padding-bottom: 64.75%;
+        }
       }
     }
 
     @include _768 {
-      margin: 31px -16px 0 -16px;
+      width: 100%;
     }
   }
 
   &__item {
+    &--latest {
+      width: 49.36%;
+
+      @include _768 {
+        display: none;
+      }
+    }
+
     &-title {
       max-width: 365px;
 
@@ -58,16 +101,6 @@
         @include font-title-h4-mob;
       }
     }
-
-    &:nth-child(2n) {
-      .short-blog__item-photo {
-        padding-bottom: 64.65%;
-      }
-    }
-
-    /*     &-photo--small {
-      padding-bottom: 64.65%;
-    } */
   }
 
   &__btn {

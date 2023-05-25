@@ -1,4 +1,4 @@
-/* ABILITIES ACCORDION ITEM */
+/* ABILITIES ITEM ACCORDION */
 const abilitiesItems = document.querySelectorAll(".abilities__item");
 const itemTogglers = document.querySelectorAll(".abilities__item-toggler");
 const targetItems = document.querySelectorAll(".abilities__item-text-box");
@@ -34,3 +34,5 @@ abilitiesItems.forEach((item) => {
     }
   });
 });
+
+/* SHORT BLOG ITEMS ACCORDION */

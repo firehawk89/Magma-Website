@@ -7,6 +7,10 @@
 
   &__items {
     margin-top: 102px;
+
+    @include _768 {
+      margin-top: 51px;
+    }
   }
 
   @include _768 {
