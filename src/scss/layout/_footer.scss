@@ -1,5 +1,6 @@
 /* FOOTER */
 .footer {
+  position: relative;
   background-color: #000;
   border-radius: 45px 45px 0px 0px;
 
@@ -33,7 +34,7 @@
   }
 
   &__middle {
-    margin-top: 44px;
+    padding-top: 44px;
   }
 
   &__title {

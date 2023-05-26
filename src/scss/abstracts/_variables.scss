@@ -5,11 +5,19 @@ $color-purple: #9a76af;
 $color-pink: #d4157a;
 $color-blue: #00005e;
 $gradient-small: linear-gradient(180deg, #f27c00 0%, #d31080 100%);
-$gradient-big: linear-gradient(
+$gradient-big-pc: linear-gradient(
   180deg,
-  #000000 26.16%,
-  #00005e 32.56%,
-  #f23a00 45.97%,
-  #f27c00 58.17%,
-  #ffffff 73.04%
+  #000000 22.4%,
+  #00005e 42.19%,
+  #f23a00 57.54%,
+  #f27c00 66.15%,
+  #ffffff 73.44%
+);
+$gradient-big-mobile: linear-gradient(
+  180deg,
+  #000000 23.97%,
+  #00005e 39.19%,
+  #d7340b 50.83%,
+  #f27c00 61.69%,
+  #ffffff 66.42%
 );

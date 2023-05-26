@@ -6,6 +6,10 @@
   background-color: #000;
 
   &--bg-gradient {
-    background: $gradient-big;
+    background: $gradient-big-pc;
+
+    @include _768 {
+      background: $gradient-big-mobile;
+    }
   }
 }

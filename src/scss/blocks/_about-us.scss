@@ -1,5 +1,5 @@
 .about-us {
-  padding: 63px 0;
+  padding: 82px 0 40px 0;
 
   &__container {
     padding-inline: 0px;
@@ -35,12 +35,14 @@
     color: $color-orange;
 
     @include _768 {
+      margin-top: 0;
       @include font-title-h2;
     }
   }
 
   &__text {
-    width: 87%;
+    max-width: 493px;
+    //width: 87%;
     text-align: center;
     color: $color-light;
 
@@ -66,5 +68,9 @@
     @include _992 {
       display: none;
     }
+  }
+
+  @include _768 {
+    padding: 33px 0px 40px 0px;
   }
 }

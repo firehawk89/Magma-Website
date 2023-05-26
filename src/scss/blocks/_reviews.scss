@@ -1,5 +1,5 @@
 .reviews {
-  padding: 83px 0 23px 0;
+  padding: 80px 0 23px 0;
 
   &__container {
     @include min_992 {
@@ -17,7 +17,7 @@
 
   &__slider {
     position: relative;
-    margin-top: -60px;
+    margin-top: -57px;
 
     @include _1200 {
       margin-top: -40px;
@@ -28,11 +28,11 @@
       top: 0;
       right: 0;
       width: 61.65%;
-      height: 58.5%;
+      height: 58.65%;
     }
 
     @include _992 {
-      margin: 34px -16px 0px;
+      margin: 35px -16px 0px;
     }
 
     &-body,
@@ -40,43 +40,50 @@
     .slick-track {
       height: 100%;
     }
-
-    /*     .slick-slide {
-      //margin: 0 11.5px;
-    }
-
-    .slick-track {
-      //margin: 0 11.5px;
-    }
-
-    .slick-track {
-      @include _992 {
-        display: flex;
-      }
-    } */
   }
 
   &__item {
     position: relative;
-    padding: 55px 62px 55px 75px;
+    margin: 0 11.5px;
     display: flex;
     gap: 21px;
     border-radius: 35px;
     background-color: rgba($color-purple, 0.23);
+  }
 
-    @include _1366 {
-      padding: 40px 62px 40px 75px;
+  &__btn-prev,
+  &__btn-next {
+    cursor: pointer;
+    position: absolute;
+    width: 31px;
+    height: 58px;
+    background-color: $color-dark;
+    top: 28.18%;
+    z-index: 3;
+    @include mask("../assets/images/arrow.svg");
+    transition: all 0.5s ease;
+
+    &.slick-disabled {
+      opacity: 0.5;
+    }
+
+    @include _1200 {
+      top: 50%;
+      translate: 0 -50%;
     }
 
     @include _992 {
-      padding: 22px 27px 24px 28px;
+      display: none;
     }
+  }
 
-    @include _992 {
-      /* &:not(:last-child) {
-        margin-right: 23px;
-      } */
-    }
+  &__btn-prev {
+    transform: rotate(180deg);
+    left: 33.5px;
+  }
+
+  &__btn-next {
+    right: 11.5px;
   }
 
   &__author {
@@ -102,7 +109,7 @@
   }
 
   &__content {
-    padding-left: 119px;
+    padding: 57px 63px 46px 193px;
     display: flex;
     flex-direction: column;
     gap: 11px;
@@ -129,8 +136,12 @@
       }
     }
 
+    @include _1366 {
+      padding: 40px 62px 40px 194px;
+    }
+
     @include _992 {
-      padding: 0;
+      padding: 22px 27px 24px 28px;
       flex-direction: column-reverse;
       gap: 20px;
     }
@@ -163,7 +174,7 @@
     }
 
     @include _1200 {
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
     }
 
     @include _768 {
@@ -171,37 +182,7 @@
     }
   }
 
-  &__btn-prev,
-  &__btn-next {
-    cursor: pointer;
-    position: absolute;
-    width: 31px;
-    height: 58px;
-    background-color: $color-dark;
-    top: 28.18%;
-    z-index: 3;
-    @include mask("../assets/images/arrow.svg");
-
-    @include _1200 {
-      top: 50%;
-      translate: 0 -50%;
-    }
-
-    @include _992 {
-      display: none;
-    }
-  }
-
-  &__btn-prev {
-    transform: rotate(180deg);
-    left: 22px;
-  }
-
-  &__btn-next {
-    right: 11px;
-  }
-
-  @include _992 {
-    padding: 33px 0px;
+  @include _768 {
+    padding: 29px 0px;
   }
 }

@@ -1,5 +1,5 @@
 .short-portfolio {
-  padding-top: 51px;
+  padding: 49px 0 21px 0;
 
   &__body {
     position: relative;
@@ -46,7 +46,7 @@
     }
 
     @include _768 {
-      margin-top: 38px;
+      margin-top: 39px;
       top: 0;
       right: 0;
       align-self: center;
@@ -70,7 +70,7 @@
     padding: 0 18.5px;
 
     &-video-box {
-      padding-bottom: 49.4%;
+      padding-bottom: 50.6%;
 
       @include _768 {
         padding-bottom: 163%;
@@ -94,5 +94,9 @@
     @include _992 {
       padding: 0 11.5px;
     }
+  }
+
+  @include _768 {
+    padding: 67px 0 21px 0;
   }
 }

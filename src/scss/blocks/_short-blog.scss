@@ -1,5 +1,5 @@
 .short-blog {
-  padding: 98px 0px 98px 0px;
+  padding: 98px 0px 20px 0px;
 
   &__body {
     position: relative;
@@ -47,6 +47,7 @@
   &__items {
     position: relative;
     width: 40.92%;
+    overflow: hidden;
 
     &-body {
       .slick-track {
@@ -63,9 +64,7 @@
         gap: 19px;
 
         @include _768 {
-          &:not(:last-child) {
-            margin-right: 23px;
-          }
+          margin: 0 11.5px;
         }
 
         @include min_768 {
@@ -109,11 +108,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    width: 100%;
+    z-index: 3;
+    width: 102%;
     height: 26.7%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     &.is-hidden {
       &::after {
@@ -145,7 +145,7 @@
   &__btn-prev-box {
     rotate: 180deg;
     translate: 0 -91px;
-    top: -2px;
+    top: 0;
   }
 
   &__btn-next-box {
@@ -164,12 +164,17 @@
     transition: all 0.5s ease;
 
     &.slick-disabled {
-      background-color: rgba($color-purple, $alpha: 0.5);
+      opacity: 0.5;
     }
   }
 
   &__btn-prev {
+    bottom: 30px;
     rotate: 90deg;
+
+    @include _1200 {
+      bottom: 45px;
+    }
   }
 
   &__btn-next {
@@ -186,5 +191,9 @@
       top: 0;
       right: 0;
     }
+  }
+
+  @include _768 {
+    padding: 51px 0 80px 0;
   }
 }

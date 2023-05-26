@@ -1,24 +1,29 @@
 .abilities {
-  padding: 18px 0;
+  padding: 41px 0 18px 0;
 
   &__item {
     cursor: pointer;
     position: relative;
     border-bottom: 2px solid $color-light;
 
+    &:hover {
+      .abilities__item-title {
+        color: $color-orange;
+      }
+
+      .abilities__item-toggler-bar {
+        background-color: $color-orange;
+      }
+    }
+
     &:not(:first-child) {
-      margin-top: 11px;
+      margin-top: 21px;
     }
 
     &-title {
       margin-bottom: 26px;
-      //width: fit-content;
       color: $color-light;
       transition: all 0.5s ease;
-
-      &:hover {
-        color: $color-orange;
-      }
 
       @include _768 {
         font-size: 30px;
@@ -33,12 +38,6 @@
       right: 39px;
       width: 23px;
       height: 23px;
-
-      &:hover {
-        .abilities__item-toggler-bar {
-          background-color: $color-orange;
-        }
-      }
 
       &.is-active {
         .abilities__item-toggler-bar {
@@ -86,8 +85,9 @@
     }
 
     &-text {
+      max-width: 570px;
       cursor: initial;
-      padding-bottom: 110px;
+      padding-bottom: 130px;
       color: $color-purple;
       opacity: 0;
       transition: opacity 0.5s ease;
@@ -101,5 +101,9 @@
         @include font-text-mob;
       }
     }
+  }
+
+  @include _768 {
+    padding: 46px 0 18px 0;
   }
 }
