@@ -20,12 +20,6 @@
     @include _768 {
       margin-top: 109px;
     }
-
-    &-img {
-      @include _768 {
-        width: 50%;
-      }
-    }
   }
 
   &__background {

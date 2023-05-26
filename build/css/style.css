@@ -44,10 +44,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 html,
 body,
 div,
@@ -571,8 +567,17 @@ h5 {
     height: 44px;
   }
 }
+.video-box__video-title {
+  max-width: 546px;
+  position: absolute;
+  z-index: 2;
+  font-size: 53px;
+  line-height: 76px;
+  color: #fff;
+}
 .video-box__video-text {
   position: absolute;
+  z-index: 2;
   font-family: "Rock Star";
   font-size: 22px;
   line-height: 29px;
@@ -1022,11 +1027,6 @@ body.is-locked {
 @media (max-width: 767.98px) {
   .hero__title {
     margin-top: 109px;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero__title-img {
-    width: 50%;
   }
 }
 .hero__background {
@@ -1954,8 +1954,10 @@ body.is-locked {
     margin: 51px -16px 0;
   }
 }
-.work__video-box-video-overlay {
-  background-color: unset;
+@media (max-width: 767.98px) {
+  .work__video-box {
+    height: 666px;
+  }
 }
 .work__description {
   margin-top: 41px;
@@ -2120,6 +2122,70 @@ body.is-locked {
   }
 }
 
+.portfolio__container {
+  padding-inline: 0;
+}
+.portfolio__body {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+.portfolio__video-box {
+  height: 100vh;
+  height: 100svh;
+  border-radius: 0px;
+  /* 
+  &:not(:nth-child(3)) {
+    .video-box__video-overlay {
+      background: unset;
+    }
+  } */
+}
+.portfolio__video-box .video-box__video-title {
+  max-width: 546px;
+  top: 14.75%;
+  left: 62px;
+}
+@media (max-width: 991.98px) {
+  .portfolio__video-box .video-box__video-title {
+    left: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .portfolio__video-box .video-box__video-title {
+    top: 6.3%;
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+.portfolio__video-box .video-box__video-text {
+  width: 60.88%;
+  bottom: 9.92%;
+  left: 62px;
+}
+@media (max-width: 991.98px) {
+  .portfolio__video-box .video-box__video-text {
+    left: 16px;
+    bottom: 3.15%;
+    width: calc(100% - 16px);
+  }
+}
+@media (max-width: 767.98px) {
+  .portfolio__video-box .video-box__video-text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 767.98px) {
+  .portfolio__video-box {
+    height: 666px;
+  }
+}
+.portfolio__btn {
+  margin-top: 55px;
+  align-self: center;
+}
+
 .home__hero {
   padding: 185px 0px 35px 0px;
 }
@@ -2170,5 +2236,11 @@ body.is-locked {
 @media (max-width: 767.98px) {
   .work-page {
     padding-top: 118px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-page__hero-title .hero__title-img {
+    width: 50%;
   }
 }

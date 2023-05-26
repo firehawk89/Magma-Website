@@ -11,28 +11,46 @@ videoOverlays.forEach((overlay) => {
     if (e.target === overlay.querySelector(".video-box__video-overlay-btn")) {
       video = overlay.previousElementSibling;
       videoText = overlay.nextElementSibling;
-      if (shortPortfolioTitle != null) {
-        shortPortfolioTitle.classList.add("is-hidden");
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        if (shortPortfolioTitle != null) {
+          shortPortfolioTitle.classList.add("is-hidden");
+        }
       }
       if (videoText != null) {
         videoText.classList.add("is-hidden");
       }
       overlay.classList.add("is-hidden");
-      video.play();
+	  
+      /* fullscreen mode */
+      if (video.classList.contains("video-fullscreen")) {
+        video.requestFullscreen();
+        video.play();
+      } else {
+        video.play();
+      }
 
       overlay.addEventListener("click", () => {
         if (video.paused) {
-          if (shortPortfolioTitle != null) {
-            shortPortfolioTitle.classList.add("is-hidden");
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            if (shortPortfolioTitle != null) {
+              shortPortfolioTitle.classList.add("is-hidden");
+            }
           }
           overlay.classList.add("is-hidden");
           if (videoText != null) {
             videoText.classList.add("is-hidden");
           }
-          video.play();
+          if (video.classList.contains("video-fullscreen")) {
+            video.requestFullscreen();
+            video.play();
+          } else {
+            video.play();
+          }
         } else {
-          if (shortPortfolioTitle != null) {
-            shortPortfolioTitle.classList.remove("is-hidden");
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            if (shortPortfolioTitle != null) {
+              shortPortfolioTitle.classList.remove("is-hidden");
+            }
           }
           overlay.classList.remove("is-hidden");
           if (videoText != null) {
@@ -44,8 +62,10 @@ videoOverlays.forEach((overlay) => {
 
       /* if video ended */
       video.addEventListener("ended", () => {
-        if (shortPortfolioTitle != null) {
-          shortPortfolioTitle.classList.remove("is-hidden");
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          if (shortPortfolioTitle != null) {
+            shortPortfolioTitle.classList.remove("is-hidden");
+          }
         }
         overlay.classList.remove("is-hidden");
         videoText.classList.remove("is-hidden");

@@ -48,8 +48,18 @@
       }
     }
 
+    &-title {
+      max-width: 546px;
+      position: absolute;
+      z-index: 2;
+      font-size: 53px;
+      line-height: 76px;
+      color: $color-light;
+    }
+
     &-text {
       position: absolute;
+      z-index: 2;
       @include font-title-h5;
       color: $color-light;
       transition: all 0.5s ease;

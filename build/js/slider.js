@@ -91,4 +91,18 @@ $(document).ready(function () {
       ],
     });
   }
+
+  /* WORK ITEMS MOUSE WHEEL SCROLL */
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    if ($(".work__other-items") != null) {
+      $(".work__other-items").on("wheel", function (e) {
+        e.preventDefault();
+        if (e.originalEvent.deltaY < 0) {
+          $(this).slick("slickNext");
+        } else {
+          $(this).slick("slickPrev");
+        }
+      });
+    }
+  }
 });

@@ -1,0 +1,9 @@
+.blog-page {
+  &__hero-title {
+    @include _768 {
+      .hero__title-img {
+        width: 50%;
+      }
+    }
+  }
+}

@@ -23,7 +23,11 @@
     }
 
     &-video-overlay {
-      background-color: unset;
+      //background-color: unset;
+    }
+
+    @include _768 {
+      height: 666px;
     }
   }
 
