@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magma</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,53 +20,57 @@
         <div class="container">
           <div class="header__body">
             <a class="header__logo" href="index.html">
-              <svg class="header__logo-img">
-                <use xlink:href="./assets/images/sprite.svg#logo" />
-              </svg>
+              <div class="header__logo-img"></div>
             </a>
             <nav class="header__menu menu">
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Home</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Home</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Services</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Services</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">About us</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >About us</a
+                  >
                 </li>
               </ul>
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Portfolio</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Portfolio</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Blog</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Blog</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Contact us</a>
+                  <a class="menu__link link link--color-orange" href="#"
+                    >Contact us</a
+                  >
                 </li>
               </ul>
               <ul class="menu__social social">
                 <li class="social__item">
                   <a class="social__link" href="#">
-                    <svg class="social__icon">
-                      <use xlink:href="./assets/images/sprite.svg#linkedin" />
-                    </svg>
+                    <div class="social__icon social__icon--linkedin"></div>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link" href="#">
-                    <svg class="social__icon">
-                      <use xlink:href="./assets/images/sprite.svg#instagram" />
-                    </svg>
+                    <div class="social__icon social__icon--instagram"></div>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link" href="#">
-                    <svg class="social__icon">
-                      <use xlink:href="./assets/images/sprite.svg#facebook" />
-                    </svg>
+                    <div class="social__icon social__icon--facebook"></div>
                   </a>
                 </li>
               </ul>
@@ -81,23 +86,23 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__body">
-            <div class="footer__top">
-              <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
-              </h4>
-              <h4 class="footer__top-item">
-                <a class="footer__top-link" href="#">Linklink</a>
-              </h4>
-            </div>
+            <ul class="footer__top">
+              <li class="footer__top-item">
+                <a class="footer__top-link link" href="#">Linklink</a>
+              </li>
+              <li class="footer__top-item">
+                <a class="footer__top-link link" href="#">Linklink</a>
+              </li>
+              <li class="footer__top-item">
+                <a class="footer__top-link link" href="#">Linklink</a>
+              </li>
+              <li class="footer__top-item">
+                <a class="footer__top-link link" href="#">Linklink</a>
+              </li>
+              <li class="footer__top-item">
+                <a class="footer__top-link link" href="#">Linklink</a>
+              </li>
+            </ul>
             <div class="footer__middle">
               <!-- <h2 class="footer__title">Contact us</h2> -->
               <div class="footer__title">
@@ -163,41 +168,32 @@
                   <ul class="footer__social social">
                     <li class="social__item">
                       <a class="social__link" href="#">
-                        <svg class="social__icon">
-                          <use
-                            xlink:href="./assets/images/sprite.svg#linkedin"
-                          />
-                        </svg>
+                        <div class="social__icon social__icon--linkedin"></div>
                       </a>
                     </li>
                     <li class="social__item">
                       <a class="social__link" href="#">
-                        <svg class="social__icon">
-                          <use
-                            xlink:href="./assets/images/sprite.svg#instagram"
-                          />
-                        </svg>
+                        <div class="social__icon social__icon--instagram"></div>
                       </a>
                     </li>
                     <li class="social__item">
                       <a class="social__link" href="#">
-                        <svg class="social__icon">
-                          <use
-                            xlink:href="./assets/images/sprite.svg#facebook"
-                          />
-                        </svg>
+                        <div class="social__icon social__icon--facebook"></div>
                       </a>
                     </li>
                   </ul>
                   <ul class="footer__contact-links">
                     <li class="footer__contact-links-item">
-                      <a class="footer__contact-link" href="tel:0000000000">
+                      <a
+                        class="footer__contact-link link"
+                        href="tel:0000000000"
+                      >
                         +0000000000
                       </a>
                     </li>
                     <li class="footer__contact-links-item">
                       <a
-                        class="footer__contact-link"
+                        class="footer__contact-link link"
                         href="mailto:gmail.gmail@gmail.com"
                       >
                         gmail.gmail@gmail.com

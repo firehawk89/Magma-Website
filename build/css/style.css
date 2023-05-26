@@ -19,6 +19,15 @@
   font-weight: 700;
   font-style: normal;
 }
+/*
+$gradient-big-pc: linear-gradient(
+  180deg,
+  #000000 22.4%,
+  #00005e 42.19%,
+  #f23a00 59.54%,
+  #f27c00 69.15%,
+  #ffffff 75.44%
+);*/
 *,
 *::after,
 *::before {
@@ -458,6 +467,7 @@ h5 {
   transition: all 0.5s ease;
 }
 .video-box__video-overlay.is-hidden {
+  cursor: pointer;
   opacity: 0;
 }
 .video-box__video-overlay-btn {
@@ -1523,9 +1533,6 @@ body.is-locked {
   }
 }
 
-.short-blog {
-  padding: 98px 0px 20px 0px;
-}
 .short-blog__body {
   position: relative;
   display: flex;
@@ -1576,7 +1583,6 @@ body.is-locked {
 .short-blog__items {
   position: relative;
   width: 40.92%;
-  overflow: hidden;
 }
 .short-blog__items-body .slick-track {
   display: flex;
@@ -1635,8 +1641,7 @@ body.is-locked {
   left: 0;
   right: 0;
   z-index: 3;
-  width: 102%;
-  height: 26.7%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1651,9 +1656,7 @@ body.is-locked {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15.8%, #ffffff 36.88%);
-  opacity: 1;
-  transition: all 0.5s ease;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 31.6%, #ffffff 73.76%);
 }
 @media (max-width: 767.98px) {
   .short-blog__btn-prev-box, .short-blog__btn-next-box {
@@ -1662,11 +1665,23 @@ body.is-locked {
 }
 .short-blog__btn-prev-box {
   rotate: 180deg;
-  translate: 0 -91px;
   top: 0;
+}
+.short-blog__btn-prev-box.is-hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.short-blog__btn-prev-box-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .short-blog__btn-next-box {
   bottom: -2px;
+}
+.short-blog__btn-next-box.is-hidden {
+  opacity: 0;
+  transform: translateY(100%);
 }
 .short-blog__btn-prev, .short-blog__btn-next {
   position: relative;
@@ -1689,13 +1704,10 @@ body.is-locked {
   opacity: 0.5;
 }
 .short-blog__btn-prev {
-  bottom: 30px;
-  rotate: 90deg;
-}
-@media (max-width: 1199.98px) {
-  .short-blog__btn-prev {
-    bottom: 45px;
-  }
+  top: 70px;
+  left: 50%;
+  transform-origin: left;
+  transform: translateX(-50%) rotate(90deg);
 }
 .short-blog__btn-next {
   rotate: 90deg;
@@ -1716,4 +1728,8 @@ body.is-locked {
   .short-blog {
     padding: 51px 0 80px 0;
   }
+}
+
+.home .short-blog {
+  padding: 98px 0px 30px 0px;
 }
