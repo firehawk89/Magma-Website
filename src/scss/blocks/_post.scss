@@ -1,0 +1,103 @@
+.post {
+  padding-bottom: 61px;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+
+    @include _768 {
+      gap: 36px;
+    }
+  }
+
+  &__card {
+    padding: 33px 45px 90px 101px;
+    border-radius: 45px;
+    background-color: $color-light;
+
+    @include _992 {
+      padding: 33px 30px 60px 45px;
+    }
+
+    @include _768 {
+      padding: 36px 16px 39px 17px;
+    }
+  }
+
+  &__date {
+    @include font-title-h5;
+    font-weight: 600;
+    color: $color-orange;
+
+    @include _768 {
+      @include font-title-h4-mob;
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+    margin-top: 12px;
+    font-size: 72px;
+    line-height: 76px;
+
+    @include _768 {
+      margin-top: 5px;
+      font-size: 30px;
+      line-height: 39px;
+    }
+  }
+
+  &__content {
+    margin-top: 13px;
+    display: flex;
+    gap: 59px;
+    justify-content: space-between;
+
+    @include _768 {
+      margin-top: 5px;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__photo {
+    flex: 0 1 auto;
+    position: relative;
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include min_768 {
+      flex: 0 1 62.34%;
+      max-height: 377px;
+      padding-right: 58px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba(154, 118, 176, 0.28);
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $color-orange;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    align-self: center;
+  }
+
+  @include _768 {
+    padding-bottom: 79px;
+  }
+}

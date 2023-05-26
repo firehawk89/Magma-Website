@@ -1,0 +1,26 @@
+.breadcrumbs {
+  padding: 20px 0;
+
+  &__container {
+    padding-inline: 163px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__item {
+    @include font-title-h4;
+    color: $color-light;
+
+    &:not(:last-child) {
+      color: $color-orange;
+
+      &::after {
+        content: "/";
+        padding-left: 14px;
+      }
+    }
+  }
+}

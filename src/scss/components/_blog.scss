@@ -2,6 +2,7 @@
   padding: 74px 0 52px 0px;
 
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 104px;
@@ -9,6 +10,14 @@
     @include _768 {
       gap: 70px;
     }
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    color: $color-light;
   }
 
   &__items {

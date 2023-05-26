@@ -1,0 +1,11 @@
+.post-page {
+  padding-top: 84px;
+
+  @include _768 {
+    padding-top: 93px;
+
+    &__breadcrumbs {
+      display: none;
+    }
+  }
+}
