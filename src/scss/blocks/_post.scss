@@ -71,6 +71,10 @@
   }
 
   &__text {
+    @include _768 {
+      @include font-text-mob;
+    }
+
     @include min_768 {
       flex: 0 1 62.34%;
       max-height: 377px;

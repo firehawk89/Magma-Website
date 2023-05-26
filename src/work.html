@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Wix+Madefor+Display:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -86,94 +87,173 @@
           </div>
         </div>
       </header>
-      <main class="main post-page">
-        <div class="breadcrumbs post-page__breadcrumbs">
+      <main class="main work-page">
+        <section class="work">
           <div class="container">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link link link--color-orange" href="#"
-                  >Home</a
+            <div class="work__body">
+              <h1 class="work__title">Name of work</h1>
+              <div class="work__video-box video-box">
+                <video
+                  class="video-box__video"
+                  poster="./assets/images/content/video-poster-02.webp"
                 >
-              </li>
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link link link--color-orange" href="#"
-                  >Blog</a
+                  <source
+                    src="assets/videos/test-video.webm"
+                    type="video/webm"
+                  />
+                  <source src="assets/videos/test-video.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="work__video-box-video-overlay video-box__video-overlay"
                 >
-              </li>
-              <li class="breadcrumbs__item">Posts name</li>
-            </ul>
-          </div>
-        </div>
-        <section class="post">
-          <div class="container">
-            <div class="post__body">
-              <article class="post__card">
-                <time class="post__date" datetime="2023-02-15">15/02/2023</time>
-                <h1 class="post__title">Post’s name</h1>
-                <div class="post__content">
-                  <div class="post__photo">
-                    <picture>
-                      <source
-                        srcset="./assets/images/content/post.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        class="post__photo-img"
-                        src="./assets/images/content/post.jpg"
-                        alt=""
-                      />
-                    </picture>
-                  </div>
-                  <p class="post__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    dignissim, est sit amet convallis scelerisque, urna quam
-                    aliquam nunc, vitae eleifend augue purus id erat. Nullam sed
-                    elit nec massa venenatis bibendum luctus sit amet diam. Ut
-                    felis metus, condimentum id mi sit amet, euismod blandit
-                    eros. Quisque a mauris libero. Proin sem leo, pretium at
-                    accumsan id, euismod vitae lacus. Pellentesque felis turpis,
-                    mattis non tincidunt vel, placerat ut felis. Nulla eu mauris
-                    vel dui egestas vehicula. Sed in venenatis diam, sit amet
-                    porttitor orci. Suspendisse pulvinar vulputate diam, nec
-                    tempus tellus iaculis in. Etiam iaculis metus eu odio dictum
-                    fermentum sed a eros. Phasellus blandit massa eget dignissim
-                    aliquet. Nulla elit mi, accumsan quis tincidunt nec,
-                    suscipit vitae neque. Praesent pretium, augue eget maximus
-                    convallis, orci elit tincidunt purus, eu semper leo ligula
-                    in libero. Morbi interdum enim non tempus rutrum. Mauris
-                    eget tellus at orci tempus molestie. Etiam tincidunt, tortor
-                    quis bibendum ultrices, nibh tortor laoreet augue, in
-                    viverra quam dolor sed diam. Nunc fermentum neque non auctor
-                    maximus. Aliquam sit amet dui eu arcu tincidunt porta sit
-                    amet suscipit orci. Ut ornare nunc at dapibus dapibus.
-                    Maecenas ac justo vel tellus blandit malesuada eget a enim.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    dignissim, est sit amet convallis scelerisque, urna quam
-                    aliquam nunc, vitae eleifend augue purus id erat. Nullam sed
-                    elit nec massa venenatis bibendum luctus sit amet diam. Ut
-                    felis metus, condimentum id mi sit amet, euismod blandit
-                    eros. Quisque a mauris libero. Proin sem leo, pretium at
-                    accumsan id, euismod vitae lacus. Pellentesque felis turpis,
-                    mattis non tincidunt vel, placerat ut felis. Nulla eu mauris
-                    vel dui egestas vehicula. Sed in venenatis diam, sit amet
-                    porttitor orci. Suspendisse pulvinar vulputate diam, nec
-                    tempus tellus iaculis in. Etiam iaculis metus eu odio dictum
-                    fermentum sed a eros. Phasellus blandit massa eget dignissim
-                    aliquet. Nulla elit mi, accumsan quis tincidunt nec,
-                    suscipit vitae neque. Praesent pretium, augue eget maximus
-                    convallis, orci elit tincidunt purus, eu semper leo ligula
-                    in libero. Morbi interdum enim non tempus rutrum. Mauris
-                    eget tellus at orci tempus molestie. Etiam tincidunt, tortor
-                    quis bibendum ultrices, nibh tortor laoreet augue, in
-                    viverra quam dolor sed diam. Nunc fermentum neque non auctor
-                    maximus. Aliquam sit amet dui eu arcu tincidunt porta sit
-                    amet suscipit orci. Ut ornare nunc at dapibus dapibus.
-                    Maecenas ac justo vel tellus blandit malesuada eget a enim.
-                  </p>
+                  <div class="video-box__video-overlay-btn"></div>
                 </div>
-              </article>
-              <div class="post__btn btn">
-                <span class="btn__text">Back to blog</span>
+              </div>
+              <ul class="work__description">
+                <li class="work__description-item">
+                  <h4 class="work__description-title">Aim</h4>
+                  <p class="work__description-text">
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                    Quisque sagittis orci ut diam condimentum, vel euismod erat
+                    placerat. In iaculis arcu eros, eget tempus orci facilisis
+                    id.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut et massa mi.
+                  </p>
+                </li>
+                <li class="work__description-item">
+                  <h4 class="work__description-title">Result</h4>
+                  <p class="work__description-text">
+                    Curabitur pellentesque nibh nibh, at maximus ante fermentum
+                    sit amet. Pellentesque commodo lacus at sodales sodales.
+                    Quisque sagittis orci ut diam condimentum, vel euismod erat
+                    placerat. In iaculis arcu eros, eget tempus orci facilisis
+                    id.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut et massa mi.
+                  </p>
+                </li>
+              </ul>
+              <div class="work__other">
+                <div class="work__other-header">
+                  <h3 class="work__other-title">Other works</h3>
+                  <div class="work__other-btn btn">
+                    <span class="btn__text">More</span>
+                  </div>
+                </div>
+                <div class="work__slider">
+                  <ul class="work__other-items">
+                    <li class="work__other-item">
+                      <a class="work__other-link" href="#">
+                        <div class="work__other-link-container">
+                          <div class="work__other-item-photo">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./assets/images/content/services-04.webp
+                                "
+                                type="image/webp"
+                              />
+                              <img
+                                class="work__other-item-photo-img"
+                                src="./assets/images/content/services-04.png"
+                                alt=""
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <h3 class="work__other-item-title">Name of work</h3>
+                      </a>
+                    </li>
+                    <li class="work__other-item">
+                      <a class="work__other-link" href="#">
+                        <div class="work__other-link-container">
+                          <div class="work__other-item-photo">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./assets/images/content/services-04.webp
+                                "
+                                type="image/webp"
+                              />
+                              <img
+                                class="work__other-item-photo-img"
+                                src="./assets/images/content/services-04.png"
+                                alt=""
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <h3 class="work__other-item-title">Name of work</h3>
+                      </a>
+                    </li>
+                    <li class="work__other-item">
+                      <a class="work__other-link" href="#">
+                        <div class="work__other-link-container">
+                          <div class="work__other-item-photo">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./assets/images/content/services-04.webp
+                                "
+                                type="image/webp"
+                              />
+                              <img
+                                class="work__other-item-photo-img"
+                                src="./assets/images/content/services-04.png"
+                                alt=""
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <h3 class="work__other-item-title">Name of work</h3>
+                      </a>
+                    </li>
+                    <li class="work__other-item">
+                      <a class="work__other-link" href="#">
+                        <div class="work__other-link-container">
+                          <div class="work__other-item-photo">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./assets/images/content/services-04.webp
+                                "
+                                type="image/webp"
+                              />
+                              <img
+                                class="work__other-item-photo-img"
+                                src="./assets/images/content/services-04.png"
+                                alt=""
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <h3 class="work__other-item-title">Name of work</h3>
+                      </a>
+                    </li>
+                    <li class="work__other-item">
+                      <a class="work__other-link" href="#">
+                        <div class="work__other-link-container">
+                          <div class="work__other-item-photo">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./assets/images/content/services-04.webp
+                                "
+                                type="image/webp"
+                              />
+                              <img
+                                class="work__other-item-photo-img"
+                                src="./assets/images/content/services-04.png"
+                                alt=""
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <h3 class="work__other-item-title">Name of work</h3>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -330,6 +410,10 @@
         </div>
       </footer>
     </div>
+    <script src="js/video.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

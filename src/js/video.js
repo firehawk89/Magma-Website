@@ -14,7 +14,9 @@ videoOverlays.forEach((overlay) => {
       if (shortPortfolioTitle != null) {
         shortPortfolioTitle.classList.add("is-hidden");
       }
-      videoText.classList.add("is-hidden");
+      if (videoText != null) {
+        videoText.classList.add("is-hidden");
+      }
       overlay.classList.add("is-hidden");
       video.play();
 
@@ -24,14 +26,18 @@ videoOverlays.forEach((overlay) => {
             shortPortfolioTitle.classList.add("is-hidden");
           }
           overlay.classList.add("is-hidden");
-          videoText.classList.add("is-hidden");
+          if (videoText != null) {
+            videoText.classList.add("is-hidden");
+          }
           video.play();
         } else {
           if (shortPortfolioTitle != null) {
             shortPortfolioTitle.classList.remove("is-hidden");
           }
           overlay.classList.remove("is-hidden");
-          videoText.classList.remove("is-hidden");
+          if (videoText != null) {
+            videoText.classList.remove("is-hidden");
+          }
           video.pause();
         }
       });
