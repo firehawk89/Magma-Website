@@ -70,7 +70,7 @@ $(document).ready(function () {
   if ($(".short-portfolio__items") != null) {
     $(".short-portfolio__items").slick({
       arrows: false,
-      slidesToShow: 1,
+      slidesToShow: 1.1,
       infinite: false,
     });
   }
@@ -78,7 +78,7 @@ $(document).ready(function () {
   if ($(".work__other-items") != null) {
     $(".work__other-items").slick({
       arrows: false,
-      slidesToShow: 1,
+      slidesToShow: 1.1,
       infinite: false,
       mobileFirst: true,
       responsive: [

@@ -31,7 +31,9 @@ function createWorld() {
   camera.position.set(0, 0, 16);
   //---
   renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
+
   renderer.setSize(_width, _height);
+  //renderer.setSize(_width, (4 * _width) / 6);
   renderer.shadowMap.enabled = true;
   //---
   const heroBackground = document.querySelector(".hero__background");
