@@ -1,4 +1,43 @@
 .blog {
+  padding: 74px 0 52px 0px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 104px;
+
+    @include _768 {
+      gap: 70px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 52px;
+    margin: 0 -34px;
+
+    @include _1200 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _992 {
+      margin: 0 -16px;
+    }
+
+    @include _768 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__column {
+    padding: 0px 34px;
+
+    @include _992 {
+      padding: 0 16px;
+    }
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -28,10 +67,11 @@
 
     &-title {
       max-width: 303px;
+      color: $color-purple;
       transition: all 0.5s ease;
 
       &:hover {
-        color: $color-orange;
+        color: $color-light;
       }
     }
 
@@ -42,5 +82,13 @@
         @include font-text-mob;
       }
     }
+  }
+
+  &__btn {
+    align-self: center;
+  }
+
+  @include _768 {
+    padding: 39px 0px 54px 0px;
   }
 }
