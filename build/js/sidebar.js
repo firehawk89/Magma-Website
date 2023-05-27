@@ -1,28 +1,60 @@
+const sideBar = document.querySelector(".services__side-bar");
 const sideBarMenu = document.querySelector(".services__side-bar-list");
-const sideBarItems = document.querySelectorAll(".services__side-bar-item");
+const sideBarLinks = document.querySelectorAll(".services__side-bar-link");
 const itemSwitcher = document.querySelector(
   ".services__side-bar-item-switcher"
 );
+const serviceArticles = document.querySelectorAll(".services__article");
 
 let menuDistanceFromPageTop = sideBarMenu.getBoundingClientRect().top;
 
-sideBarItems.forEach((el) => {
-  let elementDistanceFromPageTop = el.getBoundingClientRect().top;
+sideBarLinks.forEach((el) => {
+  let elementDistanceFromPageTop = el.parentElement.getBoundingClientRect().top;
 
   let elementDistanceFromMenuTop =
     elementDistanceFromPageTop - menuDistanceFromPageTop;
 
-  if (el.classList.contains("is-active")) {
+  if (el.parentElement.classList.contains("is-active")) {
     itemSwitcher.style.top = `${elementDistanceFromMenuTop}px`;
   }
 
   el.addEventListener("click", () => {
-    sideBarItems.forEach((el) => {
-      el.classList.remove("is-active");
+    sideBarLinks.forEach((el) => {
+      el.parentElement.classList.remove("is-active");
     });
 
-    el.classList.add("is-active");
+    el.parentElement.classList.add("is-active");
 
     itemSwitcher.style.top = `${elementDistanceFromMenuTop}px`;
   });
 });
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+  window.addEventListener("mousewheel", () => {
+    let scrollPosition = window.scrollY;
+
+    serviceArticles.forEach((article) => {
+      if (scrollPosition >= article.offsetTop) {
+        sideBarLinks.forEach((link) => {
+          link.parentElement.classList.remove("is-active");
+          if (
+            article.getAttribute("id") ===
+            link.getAttribute("href").substring(1)
+          ) {
+            link.parentElement.classList.add("is-active");
+
+            let menuDistanceFromPageTop =
+              sideBarMenu.getBoundingClientRect().top;
+
+            let elementDistanceFromPageTop =
+              link.parentElement.getBoundingClientRect().top;
+
+            let elementDistanceFromMenuTop =
+              elementDistanceFromPageTop - menuDistanceFromPageTop;
+            itemSwitcher.style.top = `${elementDistanceFromMenuTop}px`;
+          }
+        });
+      }
+    });
+  });
+}

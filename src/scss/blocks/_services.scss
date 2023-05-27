@@ -231,6 +231,7 @@
 
   &__side-bar {
     //flex: 0 1 22.62%;
+    position: relative;
     width: 315px;
     margin: 0 auto;
 
@@ -238,6 +239,11 @@
       position: relative;
       display: flex;
       flex-direction: column;
+
+      @include min_768 {
+        position: sticky;
+        top: 107px;
+      }
     }
 
     &-item {

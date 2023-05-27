@@ -7,3 +7,10 @@ menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("is-active");
   menu.classList.toggle("is-opened");
 });
+
+const headerHeight = document.querySelector(".header").offsetHeight;
+
+document.documentElement.style.setProperty(
+  "--scroll-padding",
+  headerHeight + "px"
+);

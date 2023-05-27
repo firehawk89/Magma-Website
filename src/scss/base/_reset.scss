@@ -12,11 +12,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 89px;
-
-  @include _768 {
-    scroll-padding: 71px;
-  }
+  scroll-padding: var(--scroll-padding);
 }
 
 html,
