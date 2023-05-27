@@ -18,6 +18,19 @@
     column-gap: 48px;
     border-bottom: 3px solid $color-light;
 
+    &-item {
+      @include _640 {
+        @include _768 {
+          //text-align: center;
+          flex: 0 1 50%;
+
+          &:nth-child(2n) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
     &-link {
       @include font-title-h4;
 
@@ -26,10 +39,17 @@
       }
     }
 
+    @include _640 {
+      padding-inline: 29px;
+      padding-bottom: 43px;
+      column-gap: 0;
+    }
+
     @include _768 {
-      padding-inline: 16px;
-      padding-bottom: 42px;
-      justify-content: space-between;
+      //padding-inline: 16px;
+      //padding-bottom: 42px;
+      //column-gap: 0;
+      //justify-content: space-between;
     }
   }
 
@@ -99,7 +119,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 12px;
+    column-gap: 12px;
+
+    &-item {
+      @include _768 {
+        text-align: center;
+        flex: 0 1 100%;
+
+        &:nth-child(n + 4) {
+          flex: 0 1 33.333%;
+        }
+      }
+    }
 
     &-link {
       font-size: 16px;
@@ -119,8 +150,9 @@
 
     @include _768 {
       margin-top: 49px;
-      flex-direction: column;
-      align-items: center;
+      justify-content: stretch;
+      gap: 0;
+      row-gap: 12px;
     }
   }
 }

@@ -362,7 +362,7 @@ h5 {
   .link--active::after {
     position: absolute;
     content: "";
-    bottom: -5px;
+    bottom: -8px;
     left: 0;
     right: 0;
     width: 100%;
@@ -744,6 +744,14 @@ body.is-locked {
   column-gap: 48px;
   border-bottom: 3px solid #fff;
 }
+@media (max-width: 639.98px) and (max-width: 767.98px) {
+  .footer__top-item {
+    flex: 0 1 50%;
+  }
+  .footer__top-item:nth-child(2n) {
+    text-align: right;
+  }
+}
 .footer__top-link {
   font-family: "Rock Star";
   font-size: 28px;
@@ -756,11 +764,11 @@ body.is-locked {
     line-height: 23px;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 639.98px) {
   .footer__top {
-    padding-inline: 16px;
-    padding-bottom: 42px;
-    justify-content: space-between;
+    padding-inline: 29px;
+    padding-bottom: 43px;
+    column-gap: 0;
   }
 }
 .footer__middle {
@@ -831,7 +839,16 @@ body.is-locked {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 12px;
+  column-gap: 12px;
+}
+@media (max-width: 767.98px) {
+  .footer__bottom-item {
+    text-align: center;
+    flex: 0 1 100%;
+  }
+  .footer__bottom-item:nth-child(n+4) {
+    flex: 0 1 33.333%;
+  }
 }
 .footer__bottom-link {
   font-size: 16px;
@@ -851,8 +868,9 @@ body.is-locked {
 @media (max-width: 767.98px) {
   .footer__bottom {
     margin-top: 49px;
-    flex-direction: column;
-    align-items: center;
+    justify-content: stretch;
+    gap: 0;
+    row-gap: 12px;
   }
 }
 
