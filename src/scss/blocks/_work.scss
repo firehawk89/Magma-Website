@@ -13,10 +13,13 @@
   }
 
   &__video-box {
-    height: 100vh;
-    height: 100svh;
     border-radius: 0px;
     margin: 42px -62px 0;
+    padding-bottom: 54.3%;
+
+    &-video-overlay {
+      //background-color: unset;
+    }
 
     .video-box__video-overlay-btn {
       width: 76px;
@@ -27,12 +30,12 @@
       margin: 51px -16px 0;
     }
 
-    &-video-overlay {
-      //background-color: unset;
-    }
-
     @include _768 {
-      height: 666px;
+      padding-bottom: 0;
+      height: 100vh;
+      height: 100svh;
+      //height: 666px;
+      //padding-bottom: 194.1%;
     }
   }
 

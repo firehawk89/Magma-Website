@@ -7,11 +7,11 @@
 
   &__list {
     display: flex;
-    gap: 14px;
+    gap: 16px;
   }
 
   &__item {
-    @include font-title-h4;
+    @include font-title-h4-mob;
     color: $color-light;
 
     &:not(:last-child) {

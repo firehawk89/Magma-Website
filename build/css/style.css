@@ -502,12 +502,12 @@ h5 {
 }
 .breadcrumbs__list {
   display: flex;
-  gap: 14px;
+  gap: 16px;
 }
 .breadcrumbs__item {
   font-family: "Rock Star";
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 18px;
+  line-height: 23px;
   color: #fff;
 }
 .breadcrumbs__item:not(:last-child) {
@@ -1885,7 +1885,7 @@ body.is-locked {
 }
 @media (max-width: 767.98px) {
   .post__card {
-    padding: 36px 16px 39px 17px;
+    padding: 36px 16px 46px 17px;
   }
 }
 .post__date {
@@ -1984,10 +1984,9 @@ body.is-locked {
   }
 }
 .work__video-box {
-  height: 100vh;
-  height: 100svh;
   border-radius: 0px;
   margin: 42px -62px 0;
+  padding-bottom: 54.3%;
 }
 .work__video-box .video-box__video-overlay-btn {
   width: 76px;
@@ -2000,7 +1999,9 @@ body.is-locked {
 }
 @media (max-width: 767.98px) {
   .work__video-box {
-    height: 666px;
+    padding-bottom: 0;
+    height: 100vh;
+    height: 100svh;
   }
 }
 .work__description {
