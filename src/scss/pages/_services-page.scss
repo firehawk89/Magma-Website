@@ -1,0 +1,12 @@
+.services-page {
+  background: $gradient-services;
+
+  .short-blog {
+    padding: 0;
+    margin-top: 77px;
+  }
+
+  @include _768 {
+    background: $gradient-services-mobile;
+  }
+}

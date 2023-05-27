@@ -20,7 +20,7 @@ videoOverlays.forEach((overlay) => {
         videoText.classList.add("is-hidden");
       }
       overlay.classList.add("is-hidden");
-	  
+
       /* fullscreen mode */
       if (video.classList.contains("video-fullscreen")) {
         video.requestFullscreen();
@@ -68,8 +68,82 @@ videoOverlays.forEach((overlay) => {
           }
         }
         overlay.classList.remove("is-hidden");
-        videoText.classList.remove("is-hidden");
+        if (videoText != null) {
+          videoText.classList.remove("is-hidden");
+        }
       });
+
+      document.addEventListener(
+        "fullscreenchange",
+        changeFullScreenHandler,
+        false
+      );
+      document.addEventListener(
+        "mozfullscreenchange",
+        changeFullScreenHandler,
+        false
+      );
+      document.addEventListener(
+        "MSFullscreenChange",
+        changeFullScreenHandler,
+        false
+      );
+      document.addEventListener(
+        "webkitfullscreenchange",
+        changeFullScreenHandler,
+        false
+      );
+
+      function changeFullScreenHandler() {
+        if (
+          !document.isFullScreen &&
+          !document.webkitIsFullScreen &&
+          !document.mozFullScreen &&
+          !document.msFullscreenElement
+        ) {
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            if (shortPortfolioTitle != null) {
+              shortPortfolioTitle.classList.remove("is-hidden");
+            }
+          }
+          overlay.classList.remove("is-hidden");
+          if (videoText != null) {
+            videoText.classList.remove("is-hidden");
+          }
+          video.pause();
+        } else {
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            if (shortPortfolioTitle != null) {
+              shortPortfolioTitle.classList.add("is-hidden");
+            }
+          }
+          overlay.classList.add("is-hidden");
+          if (videoText != null) {
+            videoText.classList.add("is-hidden");
+          }
+          video.play();
+        }
+      }
+
+      function exitFullScreenHandler() {
+        if (
+          !document.isFullScreen &&
+          !document.webkitIsFullScreen &&
+          !document.mozFullScreen &&
+          !document.msFullscreenElement
+        ) {
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            if (shortPortfolioTitle != null) {
+              shortPortfolioTitle.classList.remove("is-hidden");
+            }
+          }
+          overlay.classList.remove("is-hidden");
+          if (videoText != null) {
+            videoText.classList.remove("is-hidden");
+          }
+          video.pause();
+        }
+      }
     }
   });
 });

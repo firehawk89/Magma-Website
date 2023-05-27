@@ -12,6 +12,19 @@
     max-height: 100svh;
     aspect-ratio: 4/2.81;
     overflow: hidden;
+
+    @include _1200 {
+      aspect-ratio: 1;
+    }
+
+    @include _992 {
+      aspect-ratio: 9/16;
+    }
+
+    @include _768 {
+      aspect-ratio: 4/2.81;
+      //max-height: 263px;
+    }
   }
 
   &__title {
@@ -36,6 +49,7 @@
   &__container {
     position: relative;
     z-index: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }

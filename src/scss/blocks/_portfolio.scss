@@ -1,6 +1,13 @@
 .portfolio {
   &__container {
+    position: relative;
     padding-inline: 0;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: -300%;
   }
 
   &__body {
@@ -28,6 +35,11 @@
         font-size: 30px;
         line-height: 39px;
       }
+    }
+
+    .video-box__video-overlay-btn {
+      width: 76px;
+      height: 87px;
     }
     /* 
     &:not(:nth-child(3)) {

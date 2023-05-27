@@ -53,7 +53,6 @@ $(document).ready(function () {
     $(".short-blog__items-body").on(
       "afterChange",
       function (event, slick, currentSlide) {
-        console.log(slick, currentSlide);
         if (slick.$slides.length - 1 == currentSlide) {
           $(".short-blog__btn-next-box").addClass("is-hidden");
         } else if (currentSlide == 0) {

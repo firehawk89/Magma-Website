@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   background-color: #000;
+  overflow-x: hidden;
 
   &--bg-gradient {
-    background: $gradient-big-pc;
+    background: $gradient-index;
 
     @include _768 {
-      background: $gradient-big-mobile;
+      background: $gradient-index-mobile;
     }
   }
 }

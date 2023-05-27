@@ -12,10 +12,11 @@ body {
 
 html {
   scroll-behavior: smooth;
-}
+  scroll-padding: 89px;
 
-body {
-  //overflow-x: hidden;
+  @include _768 {
+    scroll-padding: 71px;
+  }
 }
 
 html,

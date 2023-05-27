@@ -18,6 +18,11 @@
     border-radius: 0px;
     margin: 42px -62px 0;
 
+    .video-box__video-overlay-btn {
+      width: 76px;
+      height: 87px;
+    }
+
     @include _992 {
       margin: 51px -16px 0;
     }
