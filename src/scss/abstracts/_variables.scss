@@ -14,6 +14,31 @@ $gradient-index: linear-gradient(
   #f27c00 66.15%,
   #ffffff 73.44%
 );
+$gradient-index-mobile: linear-gradient(
+  180deg,
+  #000000 23.97%,
+  #00005e 34.19%,
+  #d7340b 49.83%,
+  #f27c00 54.69%,
+  #ffffff 61.57%
+);
+$gradient-about: linear-gradient(
+  180deg,
+  #000000 19.41%,
+  #000063 26.71%,
+  #d7340b 44.65%,
+  #f23a00 50.74%,
+  #f27c00 55.21%,
+  #ffffff 79.6%
+);
+$gradient-about-mobile: linear-gradient(
+  180deg,
+  #000000 26.16%,
+  #00005e 32.56%,
+  #f23a00 45.97%,
+  #f27c00 58.17%,
+  #ffffff 73.04%
+);
 $gradient-services: linear-gradient(
   180deg,
   #000000 43.34%,
@@ -40,11 +65,3 @@ $gradient-big-pc: linear-gradient(
   #f27c00 69.15%,
   #ffffff 75.44%
 );*/
-$gradient-index-mobile: linear-gradient(
-  180deg,
-  #000000 23.97%,
-  #00005e 34.19%,
-  #d7340b 49.83%,
-  #f27c00 54.69%,
-  #ffffff 61.57%
-);

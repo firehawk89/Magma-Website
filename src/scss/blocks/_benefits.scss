@@ -1,0 +1,34 @@
+.benefits {
+  padding-top: 94px;
+
+  &__title {
+    font-size: 92px;
+    font-weight: 700;
+    line-height: 124px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-orange;
+
+    @include _768 {
+      @include font-title-h2;
+    }
+  }
+
+  &__items {
+    margin-top: 74px;
+
+    @include _768 {
+      margin-top: 20px;
+
+      .items-list__item {
+        text-align: left;
+        padding-bottom: 25px;
+        border-bottom: 2px solid $color-light;
+      }
+    }
+  }
+
+  @include _768 {
+    padding-top: 52px;
+  }
+}

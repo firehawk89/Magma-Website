@@ -1046,16 +1046,16 @@ body.is-locked {
   }
 }
 
-.about-us {
+.short-about {
   padding: 82px 0 40px 0;
 }
-.about-us__container {
+.short-about__container {
   padding-inline: 0px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-.about-us__content {
+.short-about__content {
   padding-bottom: 38px;
   flex: 0 1 40%;
   display: flex;
@@ -1063,17 +1063,17 @@ body.is-locked {
   align-items: center;
 }
 @media (min-width: 991.98px) {
-  .about-us__content {
+  .short-about__content {
     gap: 31px;
   }
 }
 @media (max-width: 991.98px) {
-  .about-us__content {
+  .short-about__content {
     padding-bottom: 0;
     flex: 0 1 100%;
   }
 }
-.about-us__title {
+.short-about__title {
   margin-top: -19px;
   font-size: 78px;
   font-weight: 700;
@@ -1083,45 +1083,45 @@ body.is-locked {
   color: #f27c00;
 }
 @media (max-width: 767.98px) {
-  .about-us__title {
+  .short-about__title {
     margin-top: 0;
     font-family: "Rock Star";
     font-size: 36px;
     line-height: 48px;
   }
 }
-.about-us__text {
+.short-about__text {
   max-width: 493px;
   text-align: center;
   color: #fff;
 }
 @media (max-width: 991.98px) {
-  .about-us__text {
+  .short-about__text {
     width: 100%;
     margin-top: 12px;
   }
 }
 @media (max-width: 767.98px) {
-  .about-us__text {
+  .short-about__text {
     font-size: 16px;
     line-height: 21px;
   }
 }
-.about-us__btn {
+.short-about__btn {
   margin-top: auto;
 }
 @media (max-width: 991.98px) {
-  .about-us__btn {
+  .short-about__btn {
     margin-top: 60px;
   }
 }
 @media (max-width: 991.98px) {
-  .about-us__image {
+  .short-about__image {
     display: none;
   }
 }
 @media (max-width: 767.98px) {
-  .about-us {
+  .short-about {
     padding: 33px 0px 40px 0px;
   }
 }
@@ -2546,6 +2546,92 @@ body.is-locked {
   }
 }
 
+.about-description {
+  padding: 69px 0 79px 0;
+}
+.about-description__text {
+  max-width: 695px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  .about-description__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-description {
+    padding: 30px 0px 67px 0px;
+  }
+}
+
+.team-photo {
+  position: relative;
+  padding-bottom: 31.5%;
+}
+.team-photo::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 124, 0, 0.3);
+}
+.team-photo__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+@media (max-width: 767.98px) {
+  .team-photo {
+    padding-bottom: 128.8%;
+  }
+}
+
+.benefits {
+  padding-top: 94px;
+}
+.benefits__title {
+  font-size: 92px;
+  font-weight: 700;
+  line-height: 124px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f27c00;
+}
+@media (max-width: 767.98px) {
+  .benefits__title {
+    font-family: "Rock Star";
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+.benefits__items {
+  margin-top: 74px;
+}
+@media (max-width: 767.98px) {
+  .benefits__items {
+    margin-top: 20px;
+  }
+  .benefits__items .items-list__item {
+    text-align: left;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  .benefits {
+    padding-top: 52px;
+  }
+}
+
 .home__hero {
   padding: 185px 0px 35px 0px;
 }
@@ -2622,6 +2708,33 @@ body.is-locked {
 }
 @media (max-width: 767.98px) {
   .services-page {
+    background: linear-gradient(180deg, #000000 26.16%, #00005e 32.56%, #f23a00 45.97%, #f27c00 58.17%, #ffffff 73.04%);
+  }
+}
+
+.about-page {
+  background: linear-gradient(180deg, #000000 19.41%, #000063 26.71%, #d7340b 44.65%, #f23a00 50.74%, #f27c00 55.21%, #ffffff 79.6%);
+}
+.about-page .hero__background {
+  padding-top: var(--scroll-padding);
+}
+.about-page .hero__background-body {
+  height: 100%;
+  position: relative;
+}
+.about-page .hero__background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-page .short-blog {
+  margin-top: 109px;
+}
+@media (max-width: 767.98px) {
+  .about-page {
     background: linear-gradient(180deg, #000000 26.16%, #00005e 32.56%, #f23a00 45.97%, #f27c00 58.17%, #ffffff 73.04%);
   }
 }
