@@ -29,22 +29,26 @@ videoOverlays.forEach((overlay) => {
         video.play();
       }
 
-      overlay.addEventListener("click", () => {
+      overlay.addEventListener("click", (e) => {
         if (video.paused) {
-          if (window.matchMedia("(min-width: 768px)").matches) {
-            if (shortPortfolioTitle != null) {
-              shortPortfolioTitle.classList.add("is-hidden");
+          if (
+            e.target === overlay.querySelector(".video-box__video-overlay-btn")
+          ) {
+            if (window.matchMedia("(min-width: 768px)").matches) {
+              if (shortPortfolioTitle != null) {
+                shortPortfolioTitle.classList.add("is-hidden");
+              }
             }
-          }
-          overlay.classList.add("is-hidden");
-          if (videoText != null) {
-            videoText.classList.add("is-hidden");
-          }
-          if (video.classList.contains("video-fullscreen")) {
-            video.requestFullscreen();
-            video.play();
-          } else {
-            video.play();
+            overlay.classList.add("is-hidden");
+            if (videoText != null) {
+              videoText.classList.add("is-hidden");
+            }
+            if (video.classList.contains("video-fullscreen")) {
+              video.requestFullscreen();
+              video.play();
+            } else {
+              video.play();
+            }
           }
         } else {
           if (window.matchMedia("(min-width: 768px)").matches) {
@@ -122,26 +126,6 @@ videoOverlays.forEach((overlay) => {
             videoText.classList.add("is-hidden");
           }
           video.play();
-        }
-      }
-
-      function exitFullScreenHandler() {
-        if (
-          !document.isFullScreen &&
-          !document.webkitIsFullScreen &&
-          !document.mozFullScreen &&
-          !document.msFullscreenElement
-        ) {
-          if (window.matchMedia("(min-width: 768px)").matches) {
-            if (shortPortfolioTitle != null) {
-              shortPortfolioTitle.classList.remove("is-hidden");
-            }
-          }
-          overlay.classList.remove("is-hidden");
-          if (videoText != null) {
-            videoText.classList.remove("is-hidden");
-          }
-          video.pause();
         }
       }
     }

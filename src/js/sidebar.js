@@ -6,11 +6,11 @@ const itemSwitcher = document.querySelector(
 );
 const serviceArticles = document.querySelectorAll(".services__article");
 
+/* ACTIVE SIDE BAR ITEM ANIMATION */
 let menuDistanceFromPageTop = sideBarMenu.getBoundingClientRect().top;
 
 sideBarLinks.forEach((el) => {
   let elementDistanceFromPageTop = el.parentElement.getBoundingClientRect().top;
-
   let elementDistanceFromMenuTop =
     elementDistanceFromPageTop - menuDistanceFromPageTop;
 
@@ -24,14 +24,14 @@ sideBarLinks.forEach((el) => {
     });
 
     el.parentElement.classList.add("is-active");
-
     itemSwitcher.style.top = `${elementDistanceFromMenuTop}px`;
   });
 });
 
+/* STICKY SIDEBAR LOGIC */
 if (window.matchMedia("(min-width: 768px)").matches) {
   window.addEventListener("mousewheel", () => {
-    let scrollPosition = window.scrollY;
+    let scrollPosition = window.scrollY - 500;
 
     serviceArticles.forEach((article) => {
       if (scrollPosition >= article.offsetTop) {
@@ -41,6 +41,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
             article.getAttribute("id") ===
             link.getAttribute("href").substring(1)
           ) {
+            activeItem = link.parentElement;
             link.parentElement.classList.add("is-active");
 
             let menuDistanceFromPageTop =

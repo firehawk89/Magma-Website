@@ -1,4 +1,11 @@
-/* Mobile Menu */
+/* SCROLL PADDING FOR FIXED HEADER */
+const headerHeight = document.querySelector(".header").offsetHeight;
+document.documentElement.style.setProperty(
+  "--scroll-padding",
+  headerHeight + "px"
+);
+
+/* MOBILE MENU */
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
 
@@ -7,10 +14,3 @@ menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("is-active");
   menu.classList.toggle("is-opened");
 });
-
-const headerHeight = document.querySelector(".header").offsetHeight;
-
-document.documentElement.style.setProperty(
-  "--scroll-padding",
-  headerHeight + "px"
-);
