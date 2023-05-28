@@ -2,8 +2,6 @@
   background: $gradient-about;
 
   .hero__background {
-    padding-top: var(--scroll-padding);
-
     &-body {
       height: 100%;
       position: relative;
@@ -17,10 +15,18 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @include min_768 {
+      padding-top: var(--scroll-padding);
+    }
   }
 
   .short-blog {
-    margin-top: 109px;
+    padding-top: 15px;
+
+    @include _768 {
+      padding-top: 124px;
+    }
   }
 
   @include _768 {

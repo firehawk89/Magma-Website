@@ -17,8 +17,9 @@
   }
 
   &__video-box {
-    height: 100vh;
-    height: 100svh;
+    //height: 100vh;
+    //height: 100svh;
+    padding-bottom: 49.96%;
     border-radius: 0px;
 
     .video-box__video-title {
@@ -26,12 +27,12 @@
       top: 14.75%;
       left: 62px;
 
-      @include _992 {
+      @include _1200 {
+        top: 6.3%;
         left: 16px;
       }
 
-      @include _768 {
-        top: 6.3%;
+      @include _992 {
         font-size: 30px;
         line-height: 39px;
       }
@@ -49,17 +50,18 @@
     } */
 
     .video-box__video-text {
-      width: 60.88%;
+      //width: 60.88%;
+      max-width: 934px;
       bottom: 9.92%;
       left: 62px;
 
-      @include _992 {
+      @include _1200 {
         left: 16px;
         bottom: 3.15%;
         width: calc(100% - 16px);
       }
 
-      @include _768 {
+      @include _992 {
         @include font-text-mob;
       }
     }

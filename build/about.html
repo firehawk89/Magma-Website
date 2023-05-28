@@ -179,19 +179,19 @@
                 <li class="items-list__row">
                   <ul class="items-list__sub-row">
                     <li
-                      class="items-list__item wow animate__fadeIn animate__animated"
+                      class="benefits__item items-list__item wow animate__animated"
                       data-wow-delay="0s"
                     >
                       <a class="items-list__link link" href="#">Support 24/7</a>
                     </li>
                     <li
-                      class="items-list__item wow animate__fadeIn animate__animated"
+                      class="benefits__item items-list__item wow animate__animated"
                       data-wow-delay="0.3s"
                     >
                       <a class="items-list__link link" href="#">Support 24/7</a>
                     </li>
                     <li
-                      class="items-list__item wow animate__fadeIn animate__animated"
+                      class="benefits__item items-list__item wow animate__animated"
                       data-wow-delay="0.6s"
                     >
                       <a class="items-list__link link" href="#">Support 24/7</a>
@@ -201,19 +201,19 @@
                 <li class="items-list__row">
                   <ul class="items-list__sub-row">
                     <li
-                      class="items-list__item wow animate__fadeIn animate__animated"
+                      class="benefits__item items-list__item wow animate__animated"
                       data-wow-delay="0.9s"
                     >
                       <a class="items-list__link link" href="#">Quality</a>
                     </li>
                     <li
-                      class="items-list__item wow animate__fadeIn animate__animated"
+                      class="benefits__item items-list__item wow animate__animated"
                       data-wow-delay="1.2s"
                     >
                       <a class="items-list__link link" href="#">Quality</a>
                     </li>
                     <li
-                      class="items-list__item wow animate__fadeIn animate__animated"
+                      class="benefits__item items-list__item wow animate__animated"
                       data-wow-delay="1.5s"
                     >
                       <a class="items-list__link link" href="#">Quality</a>
@@ -221,6 +221,82 @@
                   </ul>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dna">
+          <div class="container dna__container">
+            <h3 class="dna__title">Our DNA</h3>
+            <div class="dna__body">
+              <div class="dna__background">
+                <picture>
+                  <source
+                    srcset="assets/images/numbers.webp"
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="assets/images/numbers.png"
+                    media="(min-width: 768px)"
+                    type="image/png"
+                  />
+                  <source
+                    srcset="assets/images/numbers-small.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="dna__background-img"
+                    src="assets/images/numbers-small.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="dna__item dna__item--first">
+                <h5 class="dna__item-title">Creatively Led</h5>
+                <p class="dna__item-text">
+                  We care about the quality and integrity of our work above all
+                  else.
+                </p>
+              </div>
+              <div class="dna__item dna__item--second">
+                <h5 class="dna__item-title">Strategically Driven</h5>
+                <p class="dna__item-text">
+                  We believe the path to world-class work is through rigorous
+                  creative strategy that has clear and measurable objectives and
+                  is rooted in Brand Purpose.
+                </p>
+              </div>
+              <div class="dna__item dna__item--third">
+                <h5 class="dna__item-title">Systems Thinkers</h5>
+                <p class="dna__item-text">
+                  From product innovation to performance marketing, we believe
+                  all our work needs to work in concert to connect every element
+                  at every phase of the customer journey.
+                </p>
+              </div>
+              <div class="dna__item dna__item--fourth">
+                <h5 class="dna__item-title">Humanity Obsessed</h5>
+                <p class="dna__item-text">
+                  We strive to create work that adds value to people’s lives,
+                  not noise. We believe our industry needs to be transformed to
+                  create things people actually want and welcome.
+                </p>
+              </div>
+            </div>
+            <div class="dna__work-way">
+              <h4 class="dna__work-way-title">The way we work with you:</h4>
+              <p class="dna__work-way-text">
+                Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
+                amet. Pellentesque commodo lacus at sodales sodales. Quisque
+                sagittis orci ut diam condimentum, vel euismod erat placerat. In
+                iaculis arcu eros, eget tempus orci facilisis id.Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+                Aliquam in hendrerit urna. Pellentesque sit amet sapien
+                fringilla, mattis ligula consectetur, ultrices mauris. Curabitur
+                pellentesque nibh nibh, at maximus ante fermentum sit amet.
+                Pellentesque commodo lacus at sodales sodales. Quisque sagittis
+                orci ut diam condimentum, vel euismod erat placerat.
+              </p>
             </div>
           </div>
         </div>
@@ -239,7 +315,7 @@
                   <div class="blog__item-photo short-blog__item-photo">
                     <picture>
                       <source
-                        srcset="./assets/images/content/blog-01.png"
+                        srcset="./assets/images/content/blog-01.webp"
                         type="image/webp"
                       />
                       <img
@@ -382,7 +458,9 @@
                     </div>
                   </div>
                   <div class="short-blog__btn-next-box">
-                    <div class="short-blog__btn-next"></div>
+                    <div class="short-blog__btn-next-box-container">
+                      <div class="short-blog__btn-next"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -551,6 +629,7 @@
     <script>
       new WOW().init();
     </script>
+    <script src="js/about.js"></script>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/slider.js"></script>

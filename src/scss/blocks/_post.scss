@@ -77,7 +77,8 @@
 
     @include min_768 {
       flex: 0 1 62.34%;
-      max-height: 377px;
+      //max-height: 377px;
+      max-height: 55vh;
       padding-right: 58px;
       overflow-y: auto;
 

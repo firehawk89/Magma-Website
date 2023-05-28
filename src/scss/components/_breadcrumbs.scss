@@ -1,9 +1,5 @@
 .breadcrumbs {
-  padding: 20px 0;
-
-  &__container {
-    padding-inline: 163px;
-  }
+  padding: 20px 100px;
 
   &__list {
     display: flex;
@@ -22,5 +18,9 @@
         padding-left: 14px;
       }
     }
+  }
+
+  @include _992 {
+    padding: 20px 45px;
   }
 }

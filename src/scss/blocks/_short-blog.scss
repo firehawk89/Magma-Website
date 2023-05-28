@@ -167,6 +167,12 @@
       transform: translateY(100%);
       //display: none;
     }
+
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__btn-prev,
@@ -186,15 +192,18 @@
   }
 
   &__btn-prev {
+    rotate: 90deg;
     top: 70px;
     left: 50%;
     transform-origin: left;
     //transform: translateX(-50%) rotate(90deg);
-    rotate: 90deg;
   }
 
   &__btn-next {
     rotate: 90deg;
+    bottom: -70px;
+    transform-origin: left;
+    left: 50%;
   }
 
   &__btn {

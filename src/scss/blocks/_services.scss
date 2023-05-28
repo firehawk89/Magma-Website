@@ -140,6 +140,10 @@
           .services__article-photo {
             padding-bottom: 45.4%;
             width: 100%;
+
+            @include _768 {
+              padding-bottom: 76.65%;
+            }
           }
         }
       }
