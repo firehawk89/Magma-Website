@@ -21,7 +21,6 @@
     &-item {
       @include _640 {
         @include _768 {
-          //text-align: center;
           flex: 0 1 50%;
 
           &:nth-child(2n) {
@@ -44,13 +43,6 @@
       padding-bottom: 43px;
       column-gap: 0;
     }
-
-    @include _768 {
-      //padding-inline: 16px;
-      //padding-bottom: 42px;
-      //column-gap: 0;
-      //justify-content: space-between;
-    }
   }
 
   &__middle {
@@ -58,12 +50,6 @@
   }
 
   &__title {
-    /*     @include responsive-value("margin-bottom", 122, 39);
-    @include responsive-value("font-size", 171, 40.79);
-    @include responsive-value("line-height", 171, 40.79); //157.5 34 
-    font-weight: 700;
-    color: $color-orange;
-    text-transform: uppercase; */
     @include responsive-value("margin-bottom", 122, 39);
 
     &-img {

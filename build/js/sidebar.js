@@ -6,6 +6,7 @@ const itemSwitcher = document.querySelector(
 );
 const serviceArticles = document.querySelectorAll(".services__article");
 
+/* ACTIVE SIDE BAR ITEM */
 const changeActiveElement = () => {
   let menuDistanceFromPageTop = sideBarMenu.getBoundingClientRect().top;
 
@@ -32,7 +33,6 @@ const changeActiveElement = () => {
 
 changeActiveElement();
 
-/* ACTIVE SIDE BAR ITEM ANIMATION */
 /* STICKY SIDEBAR LOGIC */
 if (window.matchMedia("(min-width: 768px)").matches) {
   window.addEventListener("mousewheel", () => {
@@ -48,15 +48,6 @@ if (window.matchMedia("(min-width: 768px)").matches) {
           ) {
             link.parentElement.classList.add("is-active");
             changeActiveElement();
-            /* let menuDistanceFromPageTop =
-              sideBarMenu.getBoundingClientRect().top;
-
-            let elementDistanceFromPageTop =
-              link.parentElement.getBoundingClientRect().top;
-
-            let elementDistanceFromMenuTop =
-              elementDistanceFromPageTop - menuDistanceFromPageTop;
-            itemSwitcher.style.top = `${elementDistanceFromMenuTop}px`; */
           }
         });
       }

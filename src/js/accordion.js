@@ -34,5 +34,3 @@ abilitiesItems.forEach((item) => {
     }
   });
 });
-
-/* SHORT BLOG ITEMS ACCORDION */

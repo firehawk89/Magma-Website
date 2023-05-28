@@ -1,4 +1,4 @@
-// Three JS
+/* THREE JS ANIMATION */
 window.addEventListener("load", init, false);
 function init() {
   createWorld();
@@ -47,7 +47,6 @@ function onWindowResize() {
   renderer.setSize(_width, _height);
   camera.aspect = _width / _height;
   camera.updateProjectionMatrix();
-  console.log("- resize -");
 }
 //--------------------------------------------------------------------
 var primitiveElement = function () {

@@ -1,5 +1,6 @@
 /* ABOUT PAGE */
 .about-page {
+  position: relative;
   background: $gradient-about;
 
   .hero__background {
@@ -20,6 +21,12 @@
     @include min_768 {
       padding-top: var(--scroll-padding);
     }
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: -300%;
   }
 
   .short-blog {

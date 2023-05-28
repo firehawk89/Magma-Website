@@ -74,6 +74,7 @@ $(document).ready(function () {
     });
   }
 
+  /* WORK PAGE SLIDER */
   if ($(".work__other-items") != null) {
     $(".work__other-items").slick({
       arrows: false,

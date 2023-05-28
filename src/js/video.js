@@ -131,33 +131,3 @@ videoOverlays.forEach((overlay) => {
     }
   });
 });
-
-/*
-let videoBtn = document.querySelector(".video__overlay"),
-  video = document.querySelector("video"),
-  title = document.querySelector(".content__title");
-
-videoBtn.addEventListener("click", (e) => {
-  video.play();
-  //video.requestFullscreen();
-  title.style.transform = "translate(-150%, 0)";
-  videoBtn.classList.add("hidden");
-});
-
-video.addEventListener("click", (e) => {
-  if (video.paused) {
-    title.style.transform = "translate(-150%, 0)";
-    videoBtn.classList.add("hidden");
-    video.play();
-  } else {
-    title.style.transform = "translate(0, 0)";
-    videoBtn.classList.remove("hidden");
-    video.pause();
-  }
-});
-
-video.addEventListener("ended", () => {
-  title.style.transform = "translate(0, 0)";
-  videoBtn.classList.remove("hidden");
-});
-*/

@@ -46,21 +46,9 @@
     transition: all 0.3s ease;
   }
 
-  /*   &--bg-expand-top {
-    &:hover {
-      &::after {
-        top: 50%;
-        translate: 0 -50%;
-        scale: 1;
-      }
-    }
-  } */
-
   &--bg-expand-center {
     &::after {
       top: 50%;
-      /*       left: 50%;
-      translate: -50% -50%; */
       left: 0;
       translate: 0 -50%;
     }
