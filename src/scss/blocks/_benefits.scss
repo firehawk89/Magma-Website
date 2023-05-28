@@ -1,3 +1,4 @@
+/* ABOUT BENEFITS */
 .benefits {
   padding: 94px 0px;
 
@@ -20,7 +21,7 @@
     @include _768 {
       margin-top: 20px;
 
-      .items-list__item {
+      .animate-list__item {
         text-align: left;
         padding-bottom: 25px;
         border-bottom: 2px solid $color-light;
