@@ -29,6 +29,15 @@
     }
   }
 
+  &__item {
+    cursor: default;
+    @include font-title-h4;
+
+    &:hover {
+      color: $color-purple;
+    }
+  }
+
   @include _768 {
     padding: 52px 0px;
   }

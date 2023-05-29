@@ -30,10 +30,16 @@
   }
 
   .short-blog {
-    padding-top: 15px;
+    padding: 15px 0 150px 0;
 
     @include _768 {
-      padding-top: 124px;
+      padding: 124px 0 99px 0;
+    }
+
+    &__btn-prev-box {
+      &::after {
+        background: none;
+      }
     }
   }
 

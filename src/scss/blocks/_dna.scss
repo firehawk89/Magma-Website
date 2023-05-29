@@ -35,8 +35,6 @@
 
   &__item {
     &-title {
-      font-weight: 700;
-
       @include _1024 {
         @include font-title-h4-mob;
       }

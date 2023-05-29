@@ -20,7 +20,7 @@ const changeActiveElement = () => {
       itemSwitcher.style.top = `${elementDistanceFromMenuTop}px`;
     }
 
-    el.addEventListener("click", () => {
+    el.addEventListener("click", (e) => {
       sideBarLinks.forEach((el) => {
         el.parentElement.classList.remove("is-active");
       });
@@ -35,7 +35,7 @@ changeActiveElement();
 
 /* STICKY SIDEBAR LOGIC */
 if (window.matchMedia("(min-width: 768px)").matches) {
-  window.addEventListener("mousewheel", () => {
+  window.addEventListener("mousewheel", (e) => {
     let scrollPosition = window.scrollY + 0; //- 500
 
     serviceArticles.forEach((article) => {
