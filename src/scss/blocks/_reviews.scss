@@ -56,21 +56,17 @@
   &__btn-next {
     cursor: pointer;
     position: absolute;
-    width: 31px;
-    height: 58px;
+    width: 22px;
+    height: 40px;
     background-color: $color-dark;
-    top: 28.18%;
+    top: 50%;
+    translate: 0 -50%;
     z-index: 3;
     @include mask("../assets/images/arrow.svg");
     transition: all 0.5s ease;
 
     &.slick-disabled {
       opacity: 0.5;
-    }
-
-    @include _1200 {
-      top: 50%;
-      translate: 0 -50%;
     }
 
     @include _992 {
@@ -80,11 +76,11 @@
 
   &__btn-prev {
     transform: rotate(180deg);
-    left: 33.5px;
+    left: 3.4%;
   }
 
   &__btn-next {
-    right: 11.5px;
+    right: 3.4%;
   }
 
   &__author {
