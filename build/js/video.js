@@ -2,6 +2,7 @@ const videoOverlays = document.querySelectorAll(".video-box__video-overlay");
 const videoBoxes = document.querySelectorAll(".video-box");
 const shortPortfolioTitle = document.querySelector(".short-portfolio__title");
 
+let videoContainer;
 let video;
 let videoText;
 
@@ -9,7 +10,8 @@ videoOverlays.forEach((overlay) => {
   overlay.addEventListener("click", (e) => {
     /* if user clicks on the play button */
     if (e.target === overlay.querySelector(".video-box__video-overlay-btn")) {
-      video = overlay.previousElementSibling;
+      videoContainer = overlay.previousElementSibling;
+      video = videoContainer.querySelector(".video-box__video");
       videoText = overlay.nextElementSibling;
       if (window.matchMedia("(min-width: 768px)").matches) {
         if (shortPortfolioTitle != null) {
