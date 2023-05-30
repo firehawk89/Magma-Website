@@ -35,7 +35,7 @@ changeActiveElement();
 
 /* STICKY SIDEBAR LOGIC */
 if (window.matchMedia("(min-width: 768px)").matches) {
-  window.addEventListener("mousewheel", (e) => {
+  window.addEventListener("scroll", (e) => {
     let scrollPosition = window.scrollY + 0; //- 500
 
     serviceArticles.forEach((article) => {
