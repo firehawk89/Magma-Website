@@ -39,9 +39,23 @@ document.documentElement.style.setProperty(
 /* MOBILE MENU */
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
+const menuAnchors = document.querySelectorAll(".menu__link");
+const menuIdAnchors = [];
 
-menuIcon.addEventListener("click", () => {
+const toggleMenu = () => {
   document.body.classList.toggle("is-locked");
   menuIcon.classList.toggle("is-active");
   menu.classList.toggle("is-opened");
+};
+
+menuAnchors.forEach((anchor) => {
+  if (anchor.getAttribute("href").includes("#")) {
+    menuIdAnchors.push(anchor);
+  }
 });
+
+menuIdAnchors.forEach((idAnchor) => {
+  idAnchor.addEventListener("click", toggleMenu);
+});
+
+menuIcon.addEventListener("click", toggleMenu);

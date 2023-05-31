@@ -81,7 +81,7 @@ function scssTask() {
   return src(path.src.scss)
     .pipe(plumber({ errorHandler: notifier.error }))
     .pipe(scss())
-    .pipe(autoprefixer({ overrideBrowserslist: ["last 2 version"] }))
+    .pipe(autoprefixer({ overrideBrowserslist: ["last 5 version"] }))
     .pipe(dest(path.build.css))
     .pipe(concat("style.min.css"))
     .pipe(scss({ outputStyle: "compressed" }))

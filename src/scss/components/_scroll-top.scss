@@ -1,0 +1,31 @@
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 4;
+  background-color: $color-orange;
+  border-radius: 45px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+
+  &__img {
+    position: absolute;
+    width: 22px;
+    height: 12px;
+    top: 45%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include min_768 {
+    display: none;
+  }
+}

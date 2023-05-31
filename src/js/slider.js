@@ -71,6 +71,17 @@ $(document).ready(function () {
       arrows: false,
       slidesToShow: 1.1,
       infinite: false,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            prevArrow: ".short-portfolio__btn-prev",
+            nextArrow: ".short-portfolio__btn-next",
+          },
+        },
+      ],
     });
   }
 

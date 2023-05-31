@@ -151,8 +151,6 @@
   }
 
   &__date {
-    color: $color-purple;
-
     @include _768 {
       @include font-text-mob;
     }

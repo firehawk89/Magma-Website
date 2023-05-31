@@ -54,6 +54,37 @@
     }
   }
 
+  &__btn-prev,
+  &__btn-next {
+    cursor: pointer;
+    position: absolute;
+    width: 22px;
+    height: 40px;
+    background-color: $color-light;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 3;
+    @include mask("../assets/images/arrow.svg");
+    transition: all 0.5s ease;
+
+    &.slick-disabled {
+      opacity: 0.5;
+    }
+
+    @include _768 {
+      display: none;
+    }
+  }
+
+  &__btn-prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+
+  &__btn-next {
+    right: 0;
+  }
+
   &__items {
     border-radius: 40px;
     margin: 0 -62px;

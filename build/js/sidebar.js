@@ -5,6 +5,7 @@ const itemSwitcher = document.querySelector(
   ".services__side-bar-item-switcher"
 );
 const serviceArticles = document.querySelectorAll(".services__article");
+const scrollTopBtn = document.querySelector(".scroll-top");
 
 /* ACTIVE SIDE BAR ITEM */
 const changeActiveElement = () => {
@@ -33,9 +34,9 @@ const changeActiveElement = () => {
 
 changeActiveElement();
 
-/* STICKY SIDEBAR LOGIC */
-if (window.matchMedia("(min-width: 768px)").matches) {
-  window.addEventListener("scroll", (e) => {
+/* SIDEBAR ANIMATION */
+if (window.matchMedia("(min-width: 768.02px)").matches) {
+  window.addEventListener("mousewheel", (e) => {
     let scrollPosition = window.scrollY + 0; //- 500
 
     serviceArticles.forEach((article) => {
@@ -52,5 +53,24 @@ if (window.matchMedia("(min-width: 768px)").matches) {
         });
       }
     });
+  });
+}
+
+/* SCROLL TOP (TO SIDEBAR) BUTTON */
+if (window.matchMedia("(max-width: 768px)").matches) {
+  let graphicArticleDistanceFromPageTop;
+
+  window.addEventListener("scroll", () => {
+    graphicArticleDistanceFromPageTop =
+      document
+        .querySelector(".services__article--graphic")
+        .getBoundingClientRect().top -
+      document.querySelector(".header").offsetHeight;
+
+    if (graphicArticleDistanceFromPageTop < 0) {
+      scrollTopBtn.classList.add("is-visible");
+    } else {
+      scrollTopBtn.classList.remove("is-visible");
+    }
   });
 }
