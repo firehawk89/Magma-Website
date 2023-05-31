@@ -25,7 +25,18 @@ videoOverlays.forEach((overlay) => {
 
       /* fullscreen mode */
       if (video.classList.contains("video-fullscreen")) {
-        video.requestFullscreen();
+        if (video.requestFullScreen) {
+          video.requestFullScreen();
+        } else if (video.mozRequestFullScreen) {
+          // Mozilla current API
+          video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullScreen) {
+          // Webkit current API
+          video.webkitRequestFullScreen();
+        } else if (video.webkitEnterFullScreen) {
+          // This is the IOS Mobile edge case
+          video.webkitEnterFullScreen();
+        }
         video.play();
       } else {
         video.play();
@@ -46,7 +57,18 @@ videoOverlays.forEach((overlay) => {
               videoText.classList.add("is-hidden");
             }
             if (video.classList.contains("video-fullscreen")) {
-              video.requestFullscreen();
+              if (video.requestFullScreen) {
+                video.requestFullScreen();
+              } else if (video.mozRequestFullScreen) {
+                // Mozilla current API
+                video.mozRequestFullScreen();
+              } else if (video.webkitRequestFullScreen) {
+                // Webkit current API
+                video.webkitRequestFullScreen();
+              } else if (video.webkitEnterFullScreen) {
+                // This is the IOS Mobile edge case
+                video.webkitEnterFullScreen();
+              }
               video.play();
             } else {
               video.play();
