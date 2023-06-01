@@ -34,7 +34,7 @@ function createWorld() {
 
   renderer.setSize(_width, _height);
   //renderer.setSize(_width, (4 * _width) / 6);
-  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.enabled = false;
   //---
   const heroBackground = document.querySelector(".hero__background");
   heroBackground.appendChild(renderer.domElement);
@@ -111,7 +111,7 @@ var primitiveElement = function () {
     fragmentShader: document.getElementById("fragmentShader").textContent,
   });
   //---
-  var wir_mat = new THREE.MeshBasicMaterial({ color: Theme.darker });
+  //var wir_mat = new THREE.MeshBasicMaterial({ color: Theme.darker });
   var geo = new THREE.IcosahedronBufferGeometry(2, 6);
   var wir = new THREE.IcosahedronBufferGeometry(2.3, 2);
   this.shape = new THREE.Mesh(geo, mat);
@@ -119,11 +119,10 @@ var primitiveElement = function () {
   //---
   shapeGroup.add(this.point);
   shapeGroup.add(this.shape);
-
-  scene.add(shapeGroup);
 };
 function createPrimitive() {
   _primitive = new primitiveElement();
+  scene.add(shapeGroup);
 }
 
 var options = {

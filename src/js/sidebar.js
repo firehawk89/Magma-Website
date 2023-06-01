@@ -36,7 +36,7 @@ changeActiveElement();
 
 /* SIDEBAR ANIMATION */
 if (window.matchMedia("(min-width: 768.02px)").matches) {
-  window.addEventListener("mousewheel", (e) => {
+  window.addEventListener("wheel", (e) => {
     let scrollPosition = window.scrollY + 0; //- 500
 
     serviceArticles.forEach((article) => {
