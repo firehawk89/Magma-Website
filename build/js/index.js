@@ -40,7 +40,6 @@ document.documentElement.style.setProperty(
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
 const menuAnchors = document.querySelectorAll(".menu__link");
-const menuIdAnchors = [];
 
 const toggleMenu = () => {
   document.body.classList.toggle("is-locked");
@@ -48,14 +47,18 @@ const toggleMenu = () => {
   menu.classList.toggle("is-opened");
 };
 
-menuAnchors.forEach((anchor) => {
-  if (anchor.getAttribute("href").includes("#")) {
-    menuIdAnchors.push(anchor);
-  }
-});
-
-menuIdAnchors.forEach((idAnchor) => {
-  idAnchor.addEventListener("click", toggleMenu);
-});
-
 menuIcon.addEventListener("click", toggleMenu);
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  const menuIdAnchors = [];
+
+  menuAnchors.forEach((anchor) => {
+    if (anchor.getAttribute("href").includes("#")) {
+      menuIdAnchors.push(anchor);
+    }
+  });
+
+  menuIdAnchors.forEach((idAnchor) => {
+    idAnchor.addEventListener("click", toggleMenu);
+  });
+}
