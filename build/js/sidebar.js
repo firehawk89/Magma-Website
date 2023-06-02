@@ -32,25 +32,40 @@ const changeActiveElement = () => {
   });
 };
 
-changeActiveElement();
-
 /* SIDEBAR ANIMATION */
 if (window.matchMedia("(min-width: 768.02px)").matches) {
-  window.addEventListener("wheel", (e) => {
-    let scrollPosition = window.scrollY + 0; //- 500
+  const sideBarItems = document.querySelectorAll(".services__side-bar-item");
+  let headerHeight = document.querySelector(".header").offsetHeight;
+
+  const setActiveItem = (el) => {
+    sideBarItems.forEach((item) => item.classList.remove("is-active"));
+    el.classList.add("is-active");
+    changeActiveElement();
+  };
+
+  sideBarLinks.forEach((link) =>
+    link.addEventListener("click", function () {
+      setActiveItem(this.parentElement);
+      changeActiveElement();
+    })
+  );
+
+  window.addEventListener("scroll", () => {
+    let scrollPosition = window.scrollY;
 
     serviceArticles.forEach((article) => {
-      if (scrollPosition >= article.offsetTop) {
-        sideBarLinks.forEach((link) => {
-          link.parentElement.classList.remove("is-active");
-          if (
-            article.getAttribute("id") ===
-            link.getAttribute("href").substring(1)
-          ) {
-            link.parentElement.classList.add("is-active");
-            changeActiveElement();
-          }
-        });
+      let articleTopOffset = article.offsetTop;
+      let articleHeight = article.offsetHeight;
+      let articleId = article.getAttribute("id");
+
+      if (
+        scrollPosition >= articleTopOffset + headerHeight &&
+        scrollPosition < articleTopOffset + articleHeight + headerHeight
+      ) {
+        const target = document.querySelector(
+          `[href='#${articleId}']`
+        ).parentElement;
+        setActiveItem(target);
       }
     });
   });
@@ -58,6 +73,8 @@ if (window.matchMedia("(min-width: 768.02px)").matches) {
 
 /* SCROLL TOP (TO SIDEBAR) BUTTON */
 if (window.matchMedia("(max-width: 768px)").matches) {
+  changeActiveElement();
+
   let graphicArticleDistanceFromPageTop;
 
   window.addEventListener("scroll", () => {

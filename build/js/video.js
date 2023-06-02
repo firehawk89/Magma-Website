@@ -43,10 +43,13 @@ videoOverlays.forEach((overlay) => {
   videoContainer = overlay.previousElementSibling;
   video = videoContainer.querySelector(".video-box__video");
   videoText = overlay.nextElementSibling;
+  videoFullscreen = videoContainer.querySelector(
+    ".video-box__video.video-fullscreen"
+  );
 
+  /* click when video paused */
   overlay.addEventListener("click", (e) => {
     overlayBtn = overlay.querySelector(".video-box__video-overlay-btn");
-    console.log("click 1");
     /* if user clicks on the play button */
     if (e.target === overlayBtn) {
       removeVideoOverlay(overlay);
@@ -68,17 +71,14 @@ videoOverlays.forEach((overlay) => {
         video.play();
       }
 
+      /* click when video played */
       overlay.addEventListener("click", (e) => {
         if (video.paused) {
-          console.log("click inside click 1 - after video paused");
-          if (
-            e.target === overlay.querySelector(".video-box__video-overlay-btn")
-          ) {
+          if (e.target === overlayBtn) {
             removeVideoOverlay(overlay);
             video.play();
           }
         } else {
-          console.log("click inside click 1 - after video play");
           addVideoOverlay(overlay);
           /* if (video.classList.contains("video-fullscreen")) {
 			  if (document.exitFullscreen) {
@@ -170,4 +170,10 @@ videoOverlays.forEach((overlay) => {
       }
     }
   });
+
+  if (videoFullscreen != null) {
+    videoFullscreen.addEventListener("pause", () => {
+      addVideoOverlay(overlay);
+    });
+  }
 });

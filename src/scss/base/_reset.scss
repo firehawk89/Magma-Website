@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  //height: 100%;
-}
-
 html {
   scroll-padding: var(--scroll-padding);
   scroll-behavior: smooth;
