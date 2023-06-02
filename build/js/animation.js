@@ -116,9 +116,12 @@ var primitiveElement = function () {
   var wir = new THREE.IcosahedronBufferGeometry(2.3, 2);
   this.shape = new THREE.Mesh(geo, mat);
   this.point = new THREE.Points(wir, mat);
+  this.shape.frustumCulled = true;
+  this.point.frustumCulled = true;
   //---
   shapeGroup.add(this.point);
   shapeGroup.add(this.shape);
+  shapeGroup.frustumCulled = true;
 };
 function createPrimitive() {
   _primitive = new primitiveElement();
@@ -127,7 +130,7 @@ function createPrimitive() {
 
 var options = {
   perlin: {
-    speed: 0.18,
+    speed: 0.12, //0.18
     size: 0.1,
     perlins: 1.0,
     decay: 1.2,
