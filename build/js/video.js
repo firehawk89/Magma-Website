@@ -47,7 +47,6 @@ videoOverlays.forEach((overlay) => {
     ".video-box__video.video-fullscreen"
   );
 
-  /* click when video paused */
   overlay.addEventListener("click", (e) => {
     overlayBtn = overlay.querySelector(".video-box__video-overlay-btn");
     /* if user clicks on the play button */
@@ -80,17 +79,6 @@ videoOverlays.forEach((overlay) => {
           }
         } else {
           addVideoOverlay(overlay);
-          /* if (video.classList.contains("video-fullscreen")) {
-			  if (document.exitFullscreen) {
-				document.exitFullscreen();
-			  } else if (document.webkitExitFullscreen) {
-				document.webkitExitFullscreen();
-			  } else if (document.mozCancelFullScreen) {
-				document.mozCancelFullScreen();
-			  } else if (document.msExitFullscreen) {
-				document.msExitFullscreen();
-			  }
-			} */
           video.pause();
         }
       });
@@ -136,21 +124,12 @@ videoOverlays.forEach((overlay) => {
           !document.mozFullScreen &&
           !document.msFullscreenElement
         ) {
-          /*           if (video.exitFullscreen) {
-            video.exitFullscreen();
-          } else if (video.webkitExitFullscreen) {
-            video.webkitExitFullscreen();
-          } else if (video.mozCancelFullScreen) {
-            video.mozCancelFullScreen();
-          } else if (video.msExitFullscreen) {
-            video.msExitFullscreen();
-          } */
-
           /* exit fullscreen mode */
           video.controls = false;
           addVideoOverlay(overlay);
           video.pause();
         } else {
+          /* enter fullscreen mode */
           if (video.requestFullScreen) {
             video.requestFullScreen();
           } else if (video.mozRequestFullScreen) {
@@ -161,7 +140,6 @@ videoOverlays.forEach((overlay) => {
             // IOS Mobile edge case
             video.webkitEnterFullScreen();
           }
-          /* enter fullscreen mode */
 
           video.controls = true;
           removeVideoOverlay(overlay);
