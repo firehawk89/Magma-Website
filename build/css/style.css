@@ -182,9 +182,6 @@ h5 {
     gap: 80px;
   }
 }
-.social__link:hover .social__icon {
-  fill: #f27c00;
-}
 .social__icon {
   width: 81px;
   height: 81px;
@@ -897,7 +894,6 @@ body.is-locked {
         -ms-flex-align: center;
             align-items: center;
     gap: 25px;
-    overflow: auto;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
