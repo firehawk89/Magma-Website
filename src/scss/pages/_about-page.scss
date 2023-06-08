@@ -3,7 +3,15 @@
   position: relative;
   background: $gradient-about;
 
+  @include _768 {
+    background: $gradient-about-mobile;
+  }
+
   .hero__background {
+    @include min_768 {
+      padding-top: var(--scroll-padding);
+    }
+
     &-body {
       height: 100%;
       position: relative;
@@ -16,10 +24,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    @include min_768 {
-      padding-top: var(--scroll-padding);
     }
   }
 
@@ -41,9 +45,5 @@
         background: none;
       }
     }
-  }
-
-  @include _768 {
-    background: $gradient-about-mobile;
   }
 }

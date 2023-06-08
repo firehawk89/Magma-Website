@@ -3,6 +3,10 @@
   &__hero {
     padding: 185px 0px 35px 0px;
 
+    @include _768 {
+      padding: 104px 0px 43px 0px;
+    }
+
     .hero__title {
       margin-top: 0;
       //width: 67.5%;
@@ -15,10 +19,6 @@
         width: 100%;
         @include font-title-h1-mob;
       }
-    }
-
-    @include _768 {
-      padding: 104px 0px 43px 0px;
     }
   }
 

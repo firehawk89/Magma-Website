@@ -103,6 +103,12 @@
       display: flex;
       justify-content: space-between;
 
+      @include _768 {
+        margin-top: 17px;
+        flex-direction: column;
+        gap: 9px;
+      }
+
       &-column {
         display: flex;
         flex-direction: column;
@@ -140,12 +146,6 @@
             }
           }
         }
-      }
-
-      @include _768 {
-        margin-top: 17px;
-        flex-direction: column;
-        gap: 9px;
       }
     }
 

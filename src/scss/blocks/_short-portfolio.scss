@@ -2,6 +2,10 @@
 .short-portfolio {
   padding: 49px 0 21px 0;
 
+  @include _768 {
+    padding: 67px 0 21px 0;
+  }
+
   &__body {
     position: relative;
 
@@ -21,15 +25,15 @@
     @include responsive-value("line-height", 118, 48.49);
     transition: all 0.5s ease;
 
-    &.is-hidden {
-      translate: -150% 0;
-    }
-
     @include min_768 {
       position: absolute;
       top: 5.8%;
       left: 0;
       z-index: 1;
+    }
+
+    &.is-hidden {
+      translate: -150% 0;
     }
   }
 
@@ -67,12 +71,12 @@
     @include mask("../assets/images/arrow.svg");
     transition: all 0.5s ease;
 
-    &.slick-disabled {
-      opacity: 0.5;
-    }
-
     @include _768 {
       display: none;
+    }
+
+    &.slick-disabled {
+      opacity: 0.5;
     }
   }
 
@@ -101,6 +105,10 @@
   &__item {
     padding: 0 18.5px;
 
+    @include _992 {
+      padding: 0 11.5px;
+    }
+
     &-video-box {
       padding-bottom: 50.6%;
 
@@ -122,13 +130,5 @@
         }
       }
     }
-
-    @include _992 {
-      padding: 0 11.5px;
-    }
-  }
-
-  @include _768 {
-    padding: 67px 0 21px 0;
   }
 }

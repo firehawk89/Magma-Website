@@ -2,6 +2,10 @@
 .dna {
   padding: 77px 0;
 
+  @include _768 {
+    padding: 14px 0;
+  }
+
   &__title {
     color: $color-orange;
 
@@ -34,24 +38,10 @@
   }
 
   &__item {
-    &-title {
-      @include _1024 {
-        @include font-title-h4-mob;
-      }
-
-      @include _768 {
-        @include font-title-h5;
-      }
-    }
-
-    &-text {
-      margin-top: 5px;
-      @include font-text-mob;
-
-      @include _768 {
-        margin-top: 10px;
-        @include font-text-mob;
-      }
+    @include _768 {
+      margin-top: 74px;
+      padding-left: 16px;
+      width: 83.1%;
     }
 
     @include min_768 {
@@ -62,13 +52,13 @@
         left: 6.13%;
         width: 13.43%;
 
-        .dna__item-text {
-          width: 81%;
-        }
-
         @include _992 {
           top: 28%;
           left: 5%;
+        }
+
+        .dna__item-text {
+          width: 81%;
         }
       }
 
@@ -77,12 +67,12 @@
         bottom: 15.58%;
         left: 19.56%;
 
-        .dna__item-title {
-          width: 45.27%;
-        }
-
         @include _1024 {
           width: 31%;
+        }
+
+        .dna__item-title {
+          width: 45.27%;
         }
       }
 
@@ -114,15 +104,29 @@
       }
     }
 
-    @include _768 {
-      margin-top: 74px;
-      padding-left: 16px;
-      width: 83.1%;
-    }
-
     &--first {
       @include _768 {
         margin-top: -11px;
+      }
+    }
+
+    &-title {
+      @include _1024 {
+        @include font-title-h4-mob;
+      }
+
+      @include _768 {
+        @include font-title-h5;
+      }
+    }
+
+    &-text {
+      margin-top: 5px;
+      @include font-text-mob;
+
+      @include _768 {
+        margin-top: 10px;
+        @include font-text-mob;
       }
     }
   }
@@ -132,6 +136,19 @@
     max-width: 629px;
     position: relative;
     color: $color-blue;
+
+    @include _992 {
+      width: 65.45%;
+    }
+
+    @include min_768 {
+      //width: 49.1%;
+      margin-top: -7.81%;
+    }
+
+    @include _768 {
+      width: 100%;
+    }
 
     &-title {
       @include _768 {
@@ -147,22 +164,5 @@
         @include font-text-mob;
       }
     }
-
-    @include _992 {
-      width: 65.45%;
-    }
-
-    @include min_768 {
-      //width: 49.1%;
-      margin-top: -7.81%;
-    }
-
-    @include _768 {
-      width: 100%;
-    }
-  }
-
-  @include _768 {
-    padding: 14px 0;
   }
 }

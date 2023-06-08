@@ -2,6 +2,10 @@
 .post {
   padding-bottom: 61px;
 
+  @include _768 {
+    padding-bottom: 79px;
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
@@ -101,9 +105,5 @@
 
   &__btn {
     align-self: center;
-  }
-
-  @include _768 {
-    padding-bottom: 79px;
   }
 }

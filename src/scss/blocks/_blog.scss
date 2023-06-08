@@ -2,6 +2,10 @@
 .blog {
   padding: 74px 0 52px 0px;
 
+  @include _768 {
+    padding: 39px 0px 54px 0px;
+  }
+
   &__container {
     position: relative;
     display: flex;
@@ -53,6 +57,12 @@
     flex-direction: column;
     gap: 22px;
 
+    &:hover {
+      .blog__item-title {
+        color: $color-light;
+      }
+    }
+
     &-photo {
       position: relative;
       padding-bottom: 87.5%;
@@ -79,10 +89,6 @@
       max-width: 303px;
       color: $color-purple;
       transition: all 0.5s ease;
-
-      &:hover {
-        color: $color-light;
-      }
     }
 
     &-date {
@@ -96,9 +102,5 @@
 
   &__btn {
     align-self: center;
-  }
-
-  @include _768 {
-    padding: 39px 0px 54px 0px;
   }
 }

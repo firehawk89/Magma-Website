@@ -3,6 +3,10 @@
   position: relative;
   padding-bottom: 31.5%;
 
+  @include _768 {
+    padding-bottom: 128.8%;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -21,9 +25,5 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
-  }
-
-  @include _768 {
-    padding-bottom: 128.8%;
   }
 }

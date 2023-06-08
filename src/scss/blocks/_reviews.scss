@@ -2,6 +2,10 @@
 .reviews {
   padding: 80px 0 23px 0;
 
+  @include _768 {
+    padding: 29px 0px;
+  }
+
   &__container {
     @include min_992 {
       padding-left: 35px;
@@ -65,12 +69,12 @@
     @include mask("../assets/images/arrow.svg");
     transition: all 0.5s ease;
 
-    &.slick-disabled {
-      opacity: 0.5;
-    }
-
     @include _992 {
       display: none;
+    }
+
+    &.slick-disabled {
+      opacity: 0.5;
     }
   }
 
@@ -87,11 +91,6 @@
     width: 98px;
     height: 98px;
 
-    &-img {
-      object-fit: cover;
-      object-position: center center;
-    }
-
     @include min_992 {
       position: absolute;
       top: 0;
@@ -103,6 +102,11 @@
       width: 61px;
       height: 61px;
     }
+
+    &-img {
+      object-fit: cover;
+      object-position: center center;
+    }
   }
 
   &__content {
@@ -111,9 +115,23 @@
     flex-direction: column;
     gap: 11px;
 
+    @include _1366 {
+      padding: 40px 62px 40px 194px;
+    }
+
+    @include _992 {
+      padding: 22px 27px 24px 28px;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
     &-header {
       position: relative;
       display: flex;
+
+      @include _992 {
+        gap: 12px;
+      }
 
       &-text {
         flex: 0 1 100%;
@@ -127,20 +145,6 @@
           justify-content: flex-start;
         }
       }
-
-      @include _992 {
-        gap: 12px;
-      }
-    }
-
-    @include _1366 {
-      padding: 40px 62px 40px 194px;
-    }
-
-    @include _992 {
-      padding: 22px 27px 24px 28px;
-      flex-direction: column-reverse;
-      gap: 20px;
     }
   }
 
@@ -175,9 +179,5 @@
     @include _768 {
       @include font-text-mob;
     }
-  }
-
-  @include _768 {
-    padding: 29px 0px;
   }
 }

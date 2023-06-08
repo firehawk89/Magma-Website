@@ -2,6 +2,10 @@
 .idea {
   padding: 21px 0 45px 0;
 
+  @include _768 {
+    padding: 83px 0 45px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -27,9 +31,5 @@
       margin-top: 75px;
       align-self: center;
     }
-  }
-
-  @include _768 {
-    padding: 83px 0 45px 0;
   }
 }

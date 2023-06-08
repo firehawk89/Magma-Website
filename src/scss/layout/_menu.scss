@@ -3,30 +3,6 @@
   display: flex;
   justify-content: space-between;
 
-  &__list {
-    font-family: "Rock Star";
-    display: flex;
-    gap: 55px;
-    transition: all 0.5s ease;
-
-    @include _992 {
-      gap: 30px;
-    }
-
-    @include _768 {
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-    }
-  }
-
-  &__link {
-    @include _768 {
-      font-size: 30px;
-      line-height: 39px;
-    }
-  }
-
   @include _768 {
     padding: 100px 0px 58px 0px;
     position: fixed;
@@ -57,6 +33,30 @@
     }
   }
 
+  &__list {
+    font-family: "Rock Star";
+    display: flex;
+    gap: 55px;
+    transition: all 0.5s ease;
+
+    @include _992 {
+      gap: 30px;
+    }
+
+    @include _768 {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+
+  &__link {
+    @include _768 {
+      font-size: 30px;
+      line-height: 39px;
+    }
+  }
+
   &__social {
     margin-top: auto;
     gap: 55px;
@@ -69,6 +69,48 @@
     .social__icon {
       width: 42px;
       height: 42px;
+    }
+  }
+
+  &-icon {
+    position: relative;
+    z-index: 10;
+    width: 37px;
+    cursor: pointer;
+
+    @include min_768 {
+      display: none;
+    }
+
+    &.is-active {
+      .menu-icon__bar:nth-child(1) {
+        transform: translate(0, -50%) rotate(-45deg);
+        top: 50%;
+      }
+
+      .menu-icon__bar:nth-child(2) {
+        transform: translate(0, 50%) rotate(45deg);
+        bottom: 50%;
+      }
+    }
+
+    &__bar {
+      position: absolute;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $color-orange;
+      transition: all 0.5s ease;
+
+      &:nth-child(1) {
+        top: 50%;
+        transform: translate(0, -200%);
+      }
+
+      &:nth-child(2) {
+        bottom: 50%;
+        transform: translate(0, 200%);
+      }
     }
   }
 }

@@ -2,6 +2,10 @@
 .skills {
   padding: 79px 0;
 
+  @include _768 {
+    padding: 35px 0;
+  }
+
   &__title-img {
     margin: 0 auto;
   }
@@ -12,9 +16,5 @@
     @include _768 {
       margin-top: 51px;
     }
-  }
-
-  @include _768 {
-    padding: 35px 0;
   }
 }

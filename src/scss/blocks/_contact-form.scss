@@ -28,13 +28,13 @@
     color: $color-light;
     border-bottom: 3px solid $color-light;
 
+    @include _992 {
+      @include font-title-h4-mob;
+    }
+
     &::placeholder {
       font: inherit;
       color: inherit;
-    }
-
-    @include _992 {
-      @include font-title-h4-mob;
     }
   }
 

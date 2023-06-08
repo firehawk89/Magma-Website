@@ -18,6 +18,12 @@
     column-gap: 48px;
     border-bottom: 3px solid $color-light;
 
+    @include _640 {
+      padding-inline: 29px;
+      padding-bottom: 43px;
+      column-gap: 0;
+    }
+
     &-item {
       @include _640 {
         @include _768 {
@@ -36,12 +42,6 @@
       @include _992 {
         @include font-title-h4-mob;
       }
-    }
-
-    @include _640 {
-      padding-inline: 29px;
-      padding-bottom: 43px;
-      column-gap: 0;
     }
   }
 
@@ -107,6 +107,13 @@
     justify-content: space-between;
     column-gap: 12px;
 
+    @include _768 {
+      margin-top: 49px;
+      justify-content: stretch;
+      gap: 0;
+      row-gap: 12px;
+    }
+
     &-item {
       @include _768 {
         text-align: center;
@@ -124,21 +131,14 @@
       color: $color-orange;
       transition: all 0.5s ease;
 
-      &:hover {
-        color: $color-purple;
-      }
-
       @include _992 {
         font-size: 12px;
         line-height: 16px;
       }
-    }
 
-    @include _768 {
-      margin-top: 49px;
-      justify-content: stretch;
-      gap: 0;
-      row-gap: 12px;
+      &:hover {
+        color: $color-purple;
+      }
     }
   }
 }

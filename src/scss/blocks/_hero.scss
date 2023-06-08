@@ -67,10 +67,6 @@
     color: $color-light;
     transition: all 0.5s ease;
 
-    &:hover {
-      color: $color-orange;
-    }
-
     @include _992 {
       max-width: 226px;
       @include font-title-h2-mob;
@@ -79,6 +75,10 @@
     @include _768 {
       margin-top: 10px;
       align-self: flex-start;
+    }
+
+    &:hover {
+      color: $color-orange;
     }
   }
 

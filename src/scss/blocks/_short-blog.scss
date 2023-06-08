@@ -47,6 +47,10 @@
     position: relative;
     width: 40.92%;
 
+    @include _768 {
+      width: 100%;
+    }
+
     &-body {
       .slick-track {
         display: flex;
@@ -76,10 +80,6 @@
         }
       }
     }
-
-    @include _768 {
-      width: 100%;
-    }
   }
 
   &__item {
@@ -94,13 +94,13 @@
     &-title {
       max-width: 365px;
 
-      &:hover {
-        color: $color-orange;
-      }
-
       @include _768 {
         max-width: 200px;
         @include font-title-h4-mob;
+      }
+
+      &:hover {
+        color: $color-orange;
       }
     }
   }
@@ -116,6 +116,10 @@
     justify-content: center;
     align-items: center;
     transition: all 0.1s ease;
+
+    @include _768 {
+      display: none;
+    }
 
     &.is-hidden {
       &::after {
@@ -136,10 +140,6 @@
         rgba(255, 255, 255, 0) 31.6%,
         #ffffff 73.76%
       );
-    }
-
-    @include _768 {
-      display: none;
     }
   }
 

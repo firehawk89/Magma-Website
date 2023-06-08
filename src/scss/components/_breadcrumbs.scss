@@ -2,6 +2,10 @@
 .breadcrumbs {
   padding: 20px 100px;
 
+  @include _992 {
+    padding: 20px 45px;
+  }
+
   &__list {
     display: flex;
     gap: 16px;
@@ -19,9 +23,5 @@
         padding-left: 14px;
       }
     }
-  }
-
-  @include _992 {
-    padding: 20px 45px;
   }
 }

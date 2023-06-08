@@ -2,6 +2,10 @@
 .services-page {
   background: $gradient-services;
 
+  @include _768 {
+    background: $gradient-services-mobile;
+  }
+
   &-wrapper {
     overflow-x: initial;
   }
@@ -13,9 +17,5 @@
     @include min_768 {
       display: none;
     }
-  }
-
-  @include _768 {
-    background: $gradient-services-mobile;
   }
 }

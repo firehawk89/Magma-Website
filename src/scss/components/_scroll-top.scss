@@ -12,6 +12,10 @@
   pointer-events: none;
   transition: all 0.5s ease;
 
+  @include min_768 {
+    display: none;
+  }
+
   &__img {
     position: absolute;
     width: 22px;
@@ -24,9 +28,5 @@
   &.is-visible {
     opacity: 1;
     pointer-events: all;
-  }
-
-  @include min_768 {
-    display: none;
   }
 }

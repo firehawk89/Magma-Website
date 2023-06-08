@@ -2,6 +2,10 @@
 .short-about {
   padding: 82px 0 40px 0;
 
+  @include _768 {
+    padding: 33px 0px 40px 0px;
+  }
+
   &__container {
     padding-inline: 0px;
     display: flex;
@@ -69,9 +73,5 @@
     @include _992 {
       display: none;
     }
-  }
-
-  @include _768 {
-    padding: 33px 0px 40px 0px;
   }
 }
