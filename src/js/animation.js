@@ -28,7 +28,7 @@ function createWorld() {
   scene.background = new THREE.Color(Theme.secundary);
   //---
   camera = new THREE.PerspectiveCamera(35, _width / _height, 1, 1000);
-  camera.position.set(0, 0, 16);
+  camera.position.set(0, 0, 1); //0, 0, 16
   //---
   renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
 
@@ -130,12 +130,12 @@ function createPrimitive() {
 
 var options = {
   perlin: {
-    speed: 0.12, //0.18
+    speed: 0.1, // 0.18 0.12
     size: 0.1,
     perlins: 1.0,
     decay: 1.2,
     displace: 0.3,
-    complex: 1.0,
+    complex: 0.1, // 1.0
     waves: 0.6,
     eqcolor: 17.0,
     rcolor: 1.0,
