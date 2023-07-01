@@ -83,6 +83,12 @@
   }
 
   &__item {
+    &:hover {
+      .short-blog__item-title {
+        color: $color-orange;
+      }
+    }
+
     &--latest {
       width: 49.36%;
 
@@ -97,10 +103,6 @@
       @include _768 {
         max-width: 200px;
         @include font-title-h4-mob;
-      }
-
-      &:hover {
-        color: $color-orange;
       }
     }
   }

@@ -2183,6 +2183,9 @@ body.is-locked {
     padding-bottom: 64.75%;
   }
 }
+.short-blog__item:hover .short-blog__item-title {
+  color: #f27c00;
+}
 .short-blog__item--latest {
   width: 49.36%;
 }
@@ -2201,9 +2204,6 @@ body.is-locked {
     font-size: 18px;
     line-height: 23px;
   }
-}
-.short-blog__item-title:hover {
-  color: #f27c00;
 }
 .short-blog__btn-prev-box, .short-blog__btn-next-box {
   position: absolute;
@@ -2656,7 +2656,7 @@ body.is-locked {
   }
 }
 .work__slider {
-  margin: 71.5px -49px 0;
+  margin: 71.5px -62px 0;
 }
 @media (min-width: 768.02px) {
   .work__slider .slick-list {
@@ -3356,7 +3356,7 @@ body.is-locked {
 }
 .dna__work-way {
   margin-top: 60px;
-  max-width: 629px;
+  max-width: 692px;
   position: relative;
   color: #00005e;
 }
@@ -3389,6 +3389,178 @@ body.is-locked {
     font-size: 16px;
     line-height: 21px;
   }
+}
+
+.team {
+  padding: 14px 0px 48px;
+}
+@media (max-width: 768px) {
+  .team {
+    padding-top: 65px;
+  }
+}
+.team__title {
+  font-family: "Rock Star";
+  font-size: 53px;
+  line-height: 76px;
+  color: #00005e;
+}
+@media (max-width: 768px) {
+  .team__title {
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+  }
+}
+.team__info {
+  max-width: 692px;
+  color: #00005e;
+}
+@media (max-width: 768px) {
+  .team__info {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+.team__members {
+  position: relative;
+  margin-top: 43px;
+}
+@media (max-width: 768px) {
+  .team__members {
+    margin-top: 30px;
+    margin-inline: -16px;
+  }
+}
+@media (min-width: 768.02px) {
+  .team__members-body {
+    margin-inline: -9px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 21px;
+  }
+}
+@media (max-width: 768px) {
+  .team__members-body .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.team__member {
+  height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding-inline: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 21px;
+  color: #00005e;
+}
+@media (max-width: 1024px) {
+  .team__member {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+@media (max-width: 768px) {
+  .team__member {
+    padding-inline: 0px;
+    margin-inline: 12.5px;
+    gap: 5px;
+  }
+}
+.team__member-photo {
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.team__member-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.team__member-name {
+  font-family: "Rock Star";
+  font-size: 28px;
+  line-height: 36px;
+}
+@media (max-width: 768px) {
+  .team__member-name {
+    margin-top: 9px;
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+.team__member-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.team__btn-prev, .team__btn-next {
+  cursor: pointer;
+  position: absolute;
+  top: 44%;
+  width: 15px;
+  height: 27px;
+  background-color: #fff;
+  mask-image: "../assets/images/team-slider-arrow.svg";
+  -webkit-mask-image: url("../assets/images/team-slider-arrow.svg");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center center;
+  -webkit-mask-position: center center;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media (min-width: 768.02px) {
+  .team__btn-prev, .team__btn-next {
+    display: none;
+  }
+}
+@media (max-width: 568px) {
+  .team__btn-prev, .team__btn-next {
+    top: 38%;
+  }
+}
+@media (max-width: 480px) {
+  .team__btn-prev, .team__btn-next {
+    top: 32%;
+  }
+}
+.team__btn-prev.slick-disabled, .team__btn-next.slick-disabled {
+  opacity: 0.5;
+}
+.team__btn-prev {
+  left: 6%;
+}
+.team__btn-next {
+  right: 6%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 /* HOME PAGE */
@@ -3483,15 +3655,15 @@ body.is-locked {
 /* ABOUT PAGE */
 .about-page {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(27.41%, #000000), color-stop(31.71%, #000063), color-stop(54.65%, #d7340b), color-stop(60.74%, #f23a00), color-stop(64.21%, #f27c00), color-stop(94.3%, #ffffff));
-  background: -o-linear-gradient(top, #000000 27.41%, #000063 31.71%, #d7340b 54.65%, #f23a00 60.74%, #f27c00 64.21%, #ffffff 94.3%);
-  background: linear-gradient(180deg, #000000 27.41%, #000063 31.71%, #d7340b 54.65%, #f23a00 60.74%, #f27c00 64.21%, #ffffff 94.3%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20.41%, #000000), color-stop(30.71%, #000063), color-stop(47.65%, #d7340b), color-stop(55.74%, #f23a00), color-stop(59.21%, #f27c00), color-stop(85.3%, #ffffff));
+  background: -o-linear-gradient(top, #000000 20.41%, #000063 30.71%, #d7340b 47.65%, #f23a00 55.74%, #f27c00 59.21%, #ffffff 85.3%);
+  background: linear-gradient(180deg, #000000 20.41%, #000063 30.71%, #d7340b 47.65%, #f23a00 55.74%, #f27c00 59.21%, #ffffff 85.3%);
 }
 @media (max-width: 768px) {
   .about-page {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(26.16%, #000000), color-stop(37.56%, #00005e), color-stop(49.97%, #f23a00), color-stop(67.17%, #f27c00), color-stop(85.04%, #ffffff));
-    background: -o-linear-gradient(top, #000000 26.16%, #00005e 37.56%, #f23a00 49.97%, #f27c00 67.17%, #ffffff 85.04%);
-    background: linear-gradient(180deg, #000000 26.16%, #00005e 37.56%, #f23a00 49.97%, #f27c00 67.17%, #ffffff 85.04%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25.16%, #000000), color-stop(31.56%, #00005e), color-stop(49.97%, #f23a00), color-stop(77.17%, #f27c00), color-stop(88.04%, #ffffff));
+    background: -o-linear-gradient(top, #000000 25.16%, #00005e 31.56%, #f23a00 49.97%, #f27c00 77.17%, #ffffff 88.04%);
+    background: linear-gradient(180deg, #000000 25.16%, #00005e 31.56%, #f23a00 49.97%, #f27c00 77.17%, #ffffff 88.04%);
   }
 }
 @media (min-width: 768.02px) {
@@ -3522,7 +3694,7 @@ body.is-locked {
 }
 @media (max-width: 768px) {
   .about-page .short-blog {
-    padding: 124px 0 99px 0;
+    padding: 21px 0 99px 0;
   }
 }
 .about-page .short-blog__btn-prev-box::after {

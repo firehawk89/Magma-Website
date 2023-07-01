@@ -1,0 +1,140 @@
+.team {
+  padding: 14px 0px 48px;
+
+  @include _768 {
+    padding-top: 65px;
+  }
+
+  &__title {
+    @include font-title-h3;
+    color: $color-blue;
+
+    @include _768 {
+      font-size: 30px;
+      line-height: 39px;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    max-width: 692px;
+    color: $color-blue;
+
+    @include _768 {
+      margin-top: 18px;
+      @include font-text-mob;
+    }
+  }
+
+  &__members {
+    position: relative;
+    margin-top: 43px;
+
+    @include _768 {
+      margin-top: 30px;
+      margin-inline: -16px;
+    }
+  }
+
+  &__members-body {
+    @include min_768 {
+      margin-inline: -9px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 21px;
+    }
+
+    @include _768 {
+      .slick-slide {
+        display: flex;
+      }
+    }
+  }
+
+  &__member {
+    height: 100%;
+    flex: 0 1 25%;
+    padding-inline: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    color: $color-blue;
+
+    @include _1024 {
+      flex: 0 1 50%;
+    }
+
+    @include _768 {
+      padding-inline: 0px;
+      margin-inline: 12.5px;
+      gap: 5px;
+    }
+  }
+
+  &__member-photo {
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
+  &__member-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__member-name {
+    @include font-title-h4;
+
+    @include _768 {
+      margin-top: 9px;
+      font-size: 30px;
+      line-height: 39px;
+    }
+  }
+
+  &__member-info {
+    flex: 1 1 auto;
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 44%;
+    width: 15px;
+    height: 27px;
+    background-color: $color-light;
+    @include mask("../assets/images/team-slider-arrow.svg");
+    transition: all 0.5s ease;
+
+    @include min_768 {
+      display: none;
+    }
+
+    @include _568 {
+      top: 38%;
+    }
+
+    @include _480 {
+      top: 32%;
+    }
+
+    &.slick-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__btn-prev {
+    left: 6%;
+  }
+
+  &__btn-next {
+    right: 6%;
+    transform: rotate(180deg);
+  }
+}

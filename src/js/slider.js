@@ -116,4 +116,17 @@ $(document).ready(function () {
       });
     }
   }
+
+  /* TEAM SLIDER */
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    if ($(".team__members-body") != null) {
+      $(".team__members-body").slick({
+        arrows: true,
+        slidesToShow: 1,
+        infinite: false,
+        prevArrow: ".team__btn-prev",
+        nextArrow: ".team__btn-next",
+      });
+    }
+  }
 });
