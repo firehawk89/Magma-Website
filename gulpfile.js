@@ -4,8 +4,6 @@ const browserSync = require("browser-sync").create();
 const scss = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify-es").default;
-const babel = require("gulp-babel");
 const newer = require("gulp-newer");
 const webp = require("gulp-webp");
 const imagemin = require("gulp-imagemin");
@@ -94,13 +92,6 @@ function jsTask() {
     src(path.src.js)
       .pipe(plumber({ errorHandler: notifier.error }))
       .pipe(dest(path.build.js))
-      /*.pipe(src(path.src.js))*/
-      /*src(["node_modules/swiper/swiper-bundle.js", path.src.js])*/
-      /*.pipe(plumber({ errorHandler: notifier.error }))
-      .pipe(babel({ presets: ["@babel/env"] }))
-      .pipe(concat("index.min.js"))
-      .pipe(uglify())
-      .pipe(dest(path.build.js)) */
       .pipe(browserSync.reload({ stream: true }))
   );
 }
