@@ -2,6 +2,17 @@
 
 ![Magmacreative Preview](gallery/preview.jpg)
 
+## Used Tools & Technologies
+
+- HTML
+- CSS & SCSS
+- JS
+- GULP
+- jQuery
+- Three.js
+- WOW.js
+- Slick Carousel
+
 ## Gallery
 
 <details>
