@@ -25,7 +25,7 @@ const path = {
     img: `${srcPath}/assets/img/**/*.{jpg,jpeg,png,svg,gif}`,
     videos: `${srcPath}/assets/vids/**/*.{mp4,mov,webm,mkv,avi}`,
     fonts: `${srcPath}/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}`,
-    favicons: `${srcPath}/favicon.{ico,png}`,
+    favicon: `${srcPath}/favicon.{ico,png,svg}`,
   },
   build: {
     html: `${buildPath}/`,
@@ -34,7 +34,7 @@ const path = {
     img: `${buildPath}/assets/images/`,
     videos: `${buildPath}/assets/videos/`,
     fonts: `${buildPath}/fonts/`,
-    favicons: `${buildPath}/`,
+    favicon: `${buildPath}/`,
   },
   watch: {
     html: `${srcPath}/*.html`,
@@ -44,7 +44,7 @@ const path = {
     img: `${srcPath}/assets/img/**/*.{jpg,jpeg,png,svg,gif}`,
     videos: `${srcPath}/assets/vids/**/*.{mp4,mov,webm,mkv,avi}`,
     fonts: `${srcPath}/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}`,
-    favicons: `${srcPath}/favicon.{ico,png}`,
+    favicon: `${srcPath}/favicon.{ico,png,svg}`,
   },
   clean: `${buildPath}/*`,
   ignore: {
@@ -88,12 +88,10 @@ function scssTask() {
 }
 
 function jsTask() {
-  return (
-    src(path.src.js)
-      .pipe(plumber({ errorHandler: notifier.error }))
-      .pipe(dest(path.build.js))
-      .pipe(browserSync.reload({ stream: true }))
-  );
+  return src(path.src.js)
+    .pipe(plumber({ errorHandler: notifier.error }))
+    .pipe(dest(path.build.js))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function imgTask() {
@@ -133,8 +131,8 @@ function fontsTask() {
     .pipe(dest(path.build.fonts));
 }
 
-function faviconsTask() {
-  return src(path.src.favicons).pipe(dest(path.build.favicons));
+function faviconTask() {
+  return src(path.src.favicon).pipe(dest(path.build.favicon));
 }
 
 function cleanDest() {
@@ -149,7 +147,7 @@ function watcher() {
   watch([path.watch.img], imgTask);
   watch([path.watch.videos], videoTask);
   watch([path.watch.fonts], fontsTask);
-  watch([path.watch.favicons], faviconsTask);
+  watch([path.watch.favicon], faviconTask);
 }
 
 const tasks = parallel(
@@ -160,7 +158,7 @@ const tasks = parallel(
   imgTask,
   videoTask,
   fontsTask,
-  faviconsTask
+  faviconTask
 );
 const dev = series(cleanDest, tasks, parallel(watcher, sync));
 
