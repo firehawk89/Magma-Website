@@ -54,12 +54,16 @@
 
   &__member {
     height: 100%;
-    flex: 0 1 25%;
+    flex: 0 1 20%;
     padding-inline: 9px;
     display: flex;
     flex-direction: column;
     gap: 21px;
     color: $color-blue;
+
+    @include _1366 {
+      flex: 0 1 33.333%;
+    }
 
     @include _1024 {
       flex: 0 1 50%;
