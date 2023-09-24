@@ -1,5 +1,4 @@
-# Magmacreative Responsive Landing Page
-
+# Magmacreative Responsive Corporate Website
 ![Magmacreative Preview](gallery/preview.jpg)
 
 Website Link: [https://magmacreative.com/](https://magmacreative.com/)
