@@ -1,7 +1,7 @@
 # Magmacreative Responsive Corporate Website
 ![Magmacreative Preview](gallery/preview.jpg)
 
-Website Link: [https://magmacreative.com/](https://magmacreative.com/)
+Website Link: [https://wias.agency/](https://wias.agency/)
 
 ## Used Tools & Technologies
 
